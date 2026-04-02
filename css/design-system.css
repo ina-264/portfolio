@@ -1,0 +1,313 @@
+/* ==============================================
+   DESIGN SYSTEM — Editorial Palette & Tokens
+   ============================================== */
+
+:root {
+  /* --- Editorial Palette: Burgundy / Wine --- */
+  --canvas:         #180810;
+  --surface-1:      #2A1018;
+  --surface-2:      #3A1820;
+  --surface-inset:  #0F0508;
+
+  --text-primary:   #F2EBE0;
+  --text-secondary: #C4A898;
+  --text-tertiary:  #7A6460;
+  --text-inverse:   #180810;
+
+  --line-subtle:    #3A2028;
+  --line-strong:    #5A3040;
+
+  /* --- Accent Family: Cobalt / Royal Blue --- */
+  --accent-vivid:   #315CFF;
+  --accent-strong:  #243FAE;
+  --accent-deep:    #DCE4FF;
+  --accent-soft:    #0D1535;
+  --accent-muted:   #6E7FB8;
+
+  /* --- Gold accents (elegance, warmth) --- */
+  --gold:           #C9A84C;
+  --gold-dim:       rgba(201, 168, 76, 0.12);
+  --gold-muted:     rgba(201, 168, 76, 0.5);
+
+  /* --- Warm accent: mulberry / mineral red (secondary, non-destructive) --- */
+  --blush:          #A14C68;
+  --blush-dim:      rgba(161, 76, 104, 0.12);
+  --warm-muted:     #B76A7F;
+
+  /* --- Deep warm (darker mulberry, for hover/depth) --- */
+  --crimson:        #8E3F5D;
+  --crimson-dim:    rgba(142, 63, 93, 0.12);
+  --crimson-glow:   rgba(142, 63, 93, 0.07);
+
+  /* --- Cream --- */
+  --cream:          #F2EBE0;
+
+  /* --- Counter-accent: deep mulberry --- */
+  --counter-accent: #8E3F5D;
+
+  /* --- Cool Counterbalance --- */
+  --ink:            #0F0508;
+  --ink-muted:      #2A1020;
+
+  /* --- Semantic Surfaces --- */
+  --bg-canvas:      var(--canvas);
+  --bg-surface:     var(--surface-1);
+  --bg-elevated:    #201018;
+  --bg-inset:       var(--surface-inset);
+  --color-success:  #5AAB7A;
+
+  /* --- Typography --- */
+  --font-sans:  'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono:  'JetBrains Mono', 'Fira Code', monospace;
+
+  --text-xs:   0.6875rem;  /* 11px */
+  --text-sm:   0.8125rem;  /* 13px */
+  --text-base: 0.9375rem;  /* 15px */
+  --text-md:   1rem;       /* 16px */
+  --text-lg:   1.125rem;   /* 18px */
+  --text-xl:   1.3125rem;  /* 21px */
+  --text-2xl:  1.625rem;   /* 26px */
+  --text-3xl:  2rem;       /* 32px */
+  --text-4xl:  2.625rem;   /* 42px */
+  --text-5xl:  3.5rem;     /* 56px */
+  --text-6xl:  4.5rem;     /* 72px */
+  --text-7xl:  5.5rem;     /* 88px */
+  --text-display: clamp(3rem, 7vw, 6rem);
+
+  --leading-none:    1;
+  --leading-tight:   1.1;
+  --leading-snug:    1.25;
+  --leading-normal:  1.5;
+  --leading-relaxed: 1.65;
+
+  --tracking-tighter: -0.04em;
+  --tracking-tight:   -0.025em;
+  --tracking-normal:   0;
+  --tracking-wide:     0.04em;
+  --tracking-wider:    0.08em;
+  --tracking-widest:   0.12em;
+
+  --measure-narrow:  36ch;
+  --measure-normal:  52ch;
+  --measure-wide:    68ch;
+
+  /* --- Spacing --- */
+  --space-1:  0.25rem;
+  --space-2:  0.5rem;
+  --space-3:  0.75rem;
+  --space-4:  1rem;
+  --space-5:  1.25rem;
+  --space-6:  1.5rem;
+  --space-8:  2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
+  --space-40: 10rem;
+
+  /* --- Radii --- */
+  --radius-sm:   4px;
+  --radius-md:   6px;
+  --radius-lg:   10px;
+  --radius-xl:   14px;
+  --radius-2xl:  20px;
+  --radius-full: 9999px;
+
+  /* --- Shadows --- */
+  --shadow-xs:  0 1px 2px rgba(10, 2, 6, 0.50);
+  --shadow-sm:  0 2px 4px rgba(10, 2, 6, 0.55);
+  --shadow-md:  0 4px 12px rgba(10, 2, 6, 0.60);
+  --shadow-lg:  0 8px 24px rgba(10, 2, 6, 0.65);
+  --shadow-xl:  0 16px 40px rgba(10, 2, 6, 0.70);
+  --shadow-2xl: 0 24px 56px rgba(10, 2, 6, 0.80);
+
+  /* --- Motion --- */
+  --duration-fast:    120ms;
+  --duration-normal:  200ms;
+  --duration-slow:    350ms;
+  --duration-slower:  600ms;
+  --duration-slowest: 1000ms;
+
+  --ease-out:     cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out:  cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-spring:  cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-smooth:  cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-elastic: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+
+  /* --- Z-index --- */
+  --z-base:     1;
+  --z-dropdown: 100;
+  --z-sticky:   200;
+  --z-overlay:  300;
+  --z-modal:    400;
+  --z-toast:    500;
+
+  /* --- Container --- */
+  --container-max: 1120px;
+  --container-padding: var(--space-6);
+
+  /* Legacy compat tokens */
+  --surface-primary:   var(--bg-elevated);
+  --surface-secondary: var(--bg-canvas);
+  --surface-tertiary:  var(--bg-surface);
+  --surface-elevated:  var(--bg-elevated);
+  --surface-inverse:   var(--cream);
+  --border-default:    var(--line-subtle);
+  --border-strong:     var(--line-strong);
+  --border-focus:      var(--accent-strong);
+  --color-brand:       var(--accent-vivid);
+  --color-brand-subtle: var(--accent-soft);
+  --color-pink-500:    var(--blush);
+  --color-pink-300:    var(--blush);
+  --color-pink-200:    var(--blush-dim);
+  --color-pink-100:    var(--blush-dim);
+  --color-pink-50:     rgba(161, 76, 104, 0.05);
+  --color-pink-600:    var(--crimson);
+  --color-pink-700:    var(--crimson);
+  --color-blue-50:     var(--accent-soft);
+  --color-blue-200:    var(--accent-muted);
+  --color-blue-600:    var(--accent-strong);
+  --color-neutral-0:   var(--bg-elevated);
+  --color-neutral-50:  var(--bg-canvas);
+  --color-neutral-100: var(--surface-1);
+  --color-neutral-200: var(--line-subtle);
+  --color-neutral-300: var(--line-strong);
+  --color-neutral-400: var(--text-tertiary);
+  --color-neutral-500: var(--text-secondary);
+  --color-neutral-600: var(--text-secondary);
+  --color-neutral-700: #C4A898;
+  --color-neutral-800: #E0D4C4;
+  --color-neutral-900: var(--text-primary);
+  --color-neutral-950: var(--cream);
+  --text-link:         var(--accent-deep);
+  --text-accent:       var(--accent-vivid);
+  --shadow-accent:     0 4px 14px rgba(49, 92, 255, 0.22);
+  --shadow-pink:       0 4px 14px rgba(161, 76, 104, 0.15);
+  --shadow-blue:       0 4px 14px rgba(36, 63, 174, 0.20);
+  --color-success:     #5AAB7A;
+  --color-warning:     #D4A843;
+  --color-error:       #C93838;
+}
+
+/* --- Deeper wine in true dark mode --- */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-canvas:      #100608;
+    --bg-surface:     #1C0C14;
+    --bg-elevated:    #180A10;
+    --bg-inset:       #080206;
+
+    --line-subtle:    #2E1820;
+    --line-strong:    #481E2A;
+
+    --canvas:         #100608;
+    --surface-1:      #1C0C14;
+    --surface-2:      #2E1820;
+    --surface-inset:  #080206;
+
+    --shadow-xs:  0 1px 2px rgba(5, 0, 3, 0.65);
+    --shadow-sm:  0 2px 4px rgba(5, 0, 3, 0.70);
+    --shadow-md:  0 4px 12px rgba(5, 0, 3, 0.75);
+    --shadow-lg:  0 8px 24px rgba(5, 0, 3, 0.80);
+    --shadow-xl:  0 16px 40px rgba(5, 0, 3, 0.85);
+    --shadow-2xl: 0 24px 56px rgba(5, 0, 3, 0.92);
+  }
+}
+
+/* --- Reset & Base --- */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  color: var(--text-primary);
+  background-color: var(--bg-canvas);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font: inherit;
+  color: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+::selection {
+  background: var(--crimson-dim);
+  color: var(--cream);
+}
+
+/* --- Focus Visible --- */
+:focus-visible {
+  outline: 2px solid var(--accent-strong);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* --- Container --- */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+}
+
+/* --- Text Utilities --- */
+.text-gradient {
+  color: var(--blush);
+}
+
+.contact__dot {
+  color: var(--accent-vivid);
+}
+
+strong {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+em {
+  font-style: italic;
+}
+
+.mono {
+  font-family: var(--font-mono);
+}

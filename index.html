@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ina Lile — Product Designer</title>
+  <link rel="stylesheet" href="css/design-system.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- ============================================ -->
+  <!-- NAVIGATION                                   -->
+  <!-- ============================================ -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner container">
+      <a href="#hero" class="nav__logo"><span class="nav__logo-dot" aria-hidden="true"></span>ina</a>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+      </button>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#work" class="nav__link">Work</a></li>
+        <li><a href="#workflow" class="nav__link">Process</a></li>
+        <li><a href="#about" class="nav__link">About</a></li>
+        <li><a href="#contact" class="nav__link nav__link--cta">Get in touch <span class="nav__arrow">&rarr;</span></a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ============================================ -->
+  <!-- HERO — Editorial Opening Spread              -->
+  <!-- ============================================ -->
+  <section class="hero" id="hero">
+    <!-- Floating editorial elements — hero -->
+    <div class="floater floater--strip" style="top: 48%; right: 18%;" data-parallax="0.5" aria-hidden="true"></div>
+    <div class="floater floater--chip" style="bottom: 32%; left: 6%;" data-parallax="0.25" aria-hidden="true"></div>
+    <!-- Primary atmospheric stain lives in .hero::before (layout.css) — part of the surface -->
+    <!-- Secondary: faint tonal presence, lower-right, very restrained -->
+    <div class="floater atm-bloom atm-bloom--secondary" style="bottom: 8%; right: 2%;" data-parallax="0.06" aria-hidden="true"></div>
+
+    <div class="container hero__layout">
+
+      <div class="hero__marker animate-in">
+        <span class="hero__marker-dot"></span>
+        <span>Available for collaboration</span>
+      </div>
+
+      <h1 class="hero__title animate-in" data-delay="1">
+        Using research and strategy
+        <br>to make products <em class="hero__em">clearer</em><span class="hero__punct">.</span>
+      </h1>
+
+      <div class="hero__aside animate-in" data-delay="2">
+        <p class="hero__context">Currently at <span class="hero__company">Lovehoney Group</span>, designing sexual wellness experiences. Previously led consumer design at <span class="hero__company">Order Anywhere</span> by <span class="hero__company">Lightspeed Commerce</span>.</p>
+        <div class="hero__cta">
+          <a href="#work" class="cta-primary cta-primary--solo" aria-label="View work">
+            <svg width="20" height="20" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero__meta animate-in" data-delay="3">
+        <div class="hero__meta-item">
+          <span class="hero__meta-label">Role</span>
+          <span class="hero__meta-value">Product Designer</span>
+        </div>
+        <div class="hero__meta-item">
+          <span class="hero__meta-label">Focus</span>
+          <span class="hero__meta-value">UX / Research / Systems</span>
+        </div>
+        <div class="hero__meta-item">
+          <span class="hero__meta-label">Experience</span>
+          <span class="hero__meta-value">5+ years</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- SELECTED WORK                                -->
+  <!-- ============================================ -->
+  <section class="work" id="work" style="position: relative;">
+    <!-- Floating editorial elements — work section -->
+    <div class="floater floater--card" style="top: 10%; right: 6%;" data-parallax="0.3" aria-hidden="true"></div>
+    <div class="floater floater--tab" style="top: 45%; left: 4%;" data-parallax="0.4" aria-hidden="true">ref.02</div>
+    <!-- Atmospheric stain — work section -->
+    <div class="floater atm-bloom atm-bloom--sm" style="bottom: 12%; right: -10%;" data-parallax="0.10" aria-hidden="true"></div>
+    <div class="floater floater--strip" style="top: 22%; left: 2%;" data-parallax="0.45" aria-hidden="true"></div>
+    <div class="floater floater--chip" style="bottom: 40%; right: 4%;" data-parallax="0.2" aria-hidden="true"></div>
+    <div class="floater floater--caption" style="top: 68%; right: 5%;" data-parallax="0.3" aria-hidden="true">design / research<br>2021–2023</div>
+
+    <!-- Section label — editorial divider -->
+    <div class="section-rule">
+      <div class="container section-rule__inner">
+        <span class="section-rule__label">01 / Selected Work</span>
+        <span class="section-rule__line"></span>
+        <span class="section-rule__note">3 projects, 2021–2023</span>
+      </div>
+    </div>
+
+    <!-- PROJECT A — Featured poster entry (Order Status) -->
+    <div class="container">
+      <article class="project project--poster animate-in" id="case-order-status">
+        <div class="project__image-frame">
+          <img src="assets/order-status-cover.jpg" alt="Order Status feature cover" class="project__img" loading="lazy" />
+        </div>
+        <div class="project__caption">
+          <div class="project__taxonomy">
+            <span class="tax">UX Design</span>
+            <span class="tax-sep">/</span>
+            <span class="tax">Product Design</span>
+            <span class="tax-sep">/</span>
+            <span class="tax">UX Research</span>
+          </div>
+          <h3 class="project__title">Designing a Seamless
+            <br>Order Status Feature</h3>
+          <p class="project__product">Order Anywhere — Lightspeed Commerce</p>
+          <div class="project__data">
+            <div class="project__data-row">
+              <span class="project__data-key">Role</span>
+              <span class="project__data-val">Lead Product Designer</span>
+            </div>
+            <div class="project__data-row">
+              <span class="project__data-key">Duration</span>
+              <span class="project__data-val">4 months, 2022</span>
+            </div>
+            <div class="project__data-row">
+              <span class="project__data-key">Impact</span>
+              <span class="project__data-val">100% task completion, 4.7/5 satisfaction</span>
+            </div>
+          </div>
+          <button class="cta-read" data-case="order-status">
+            <span>Read case study</span>
+            <span class="cta-read__rule" aria-hidden="true"></span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+      </article>
+    </div>
+
+    <div class="container"><hr class="rule" /></div>
+
+    <!-- Tonal band — archive entries -->
+    <div class="band">
+      <div class="container">
+
+        <!-- PROJECT B — Archive entry (Self-Delivery) -->
+        <article class="project project--archive animate-in" id="case-self-delivery">
+          <div class="project__archive-header">
+            <div class="project__taxonomy">
+              <span class="tax">UX Design</span>
+              <span class="tax-sep">/</span>
+              <span class="tax">Product Design</span>
+              <span class="tax-sep">/</span>
+              <span class="tax">User Testing</span>
+            </div>
+            <span class="project__index">02</span>
+          </div>
+          <div class="project__archive-body">
+            <div class="project__archive-text">
+              <h3 class="project__title project__title--md">A Self-Delivery System
+                <br>for Order Anywhere</h3>
+              <p class="project__summary">Designed an end-to-end self-delivery feature enabling restaurants to manage deliveries independently. Customers gained saved addresses, flexible scheduling, and real-time updates.</p>
+              <div class="project__data project__data--inline">
+                <div class="project__data-row">
+                  <span class="project__data-key">Role</span>
+                  <span class="project__data-val">Lead Product Designer</span>
+                </div>
+                <div class="project__data-row">
+                  <span class="project__data-key">Duration</span>
+                  <span class="project__data-val">6 months, 2023</span>
+                </div>
+                <div class="project__data-row">
+                  <span class="project__data-key">Impact</span>
+                  <span class="project__data-val">90% task completion, 85% staff adoption</span>
+                </div>
+              </div>
+              <button class="cta-read" data-case="self-delivery">
+                <span>Read case study</span>
+                <span class="cta-read__rule" aria-hidden="true"></span>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </div>
+            <div class="project__archive-image">
+              <img src="assets/self-delivery-cover.jpg" alt="Self-delivery system cover" class="project__img" loading="lazy" />
+            </div>
+          </div>
+        </article>
+
+        <hr class="rule" />
+
+        <!-- PROJECT C — Editorial offset entry (POS Notifications) -->
+        <article class="project project--editorial animate-in" id="case-pos-notifications">
+          <div class="project__editorial-image">
+            <img src="assets/pos-notifications-cover.jpg" alt="POS notifications redesign cover" class="project__img" loading="lazy" />
+            <div class="project__editorial-overlay">
+              <span class="project__index">03</span>
+            </div>
+          </div>
+          <div class="project__editorial-content">
+            <div class="project__taxonomy">
+              <span class="tax">UX Design</span>
+              <span class="tax-sep">/</span>
+              <span class="tax">Product Design</span>
+              <span class="tax-sep">/</span>
+              <span class="tax">UX Research</span>
+            </div>
+            <h3 class="project__title project__title--md">Revamping POS
+              <br>Notifications</h3>
+            <p class="project__product">POS System — Lightspeed Commerce</p>
+            <p class="project__summary">Redesigned the notification system to improve visibility, clarity, and actionability in high-pressure restaurant environments.</p>
+            <div class="project__data">
+              <div class="project__data-row">
+                <span class="project__data-key">Role</span>
+                <span class="project__data-val">Lead Product Designer</span>
+              </div>
+              <div class="project__data-row">
+                <span class="project__data-key">Duration</span>
+                <span class="project__data-val">5 months, 2021–22</span>
+              </div>
+              <div class="project__data-row">
+                <span class="project__data-key">Impact</span>
+                <span class="project__data-val">+30% discoverability, –25% churn</span>
+              </div>
+            </div>
+            <button class="cta-read" data-case="pos-notifications">
+              <span>Read case study</span>
+              <span class="cta-read__rule" aria-hidden="true"></span>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- CASE STUDY MODALS                            -->
+  <!-- ============================================ -->
+  <!-- Order Status Case Study -->
+  <div class="modal" id="modal-order-status" aria-hidden="true">
+    <div class="modal__backdrop"></div>
+    <div class="modal__container">
+      <!-- Cover Image -->
+      <div class="case-study__cover">
+        <img src="assets/order-status-cover.jpg" alt="Order Status feature cover showing mobile ordering interface" loading="lazy" />
+      </div>
+      <button class="modal__close" aria-label="Close">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <article class="case-study">
+        <header class="case-study__header">
+          <div class="case-study__header-tags">
+            <span class="tag tag--pink">UX Design</span>
+            <span class="tag tag--blue">Product Design</span>
+            <span class="tag tag--neutral">UX Research</span>
+            <span class="tag tag--neutral">User Testing</span>
+          </div>
+          <h2 class="case-study__title">Designing a Seamless 'Order Status' Feature</h2>
+          <p class="case-study__product">Order Anywhere — Lightspeed Commerce</p>
+          <div class="case-study__meta-grid">
+            <div class="case-study__meta-item">
+              <span class="case-study__meta-label">Role</span>
+              <span class="case-study__meta-value">Lead Product Designer</span>
+            </div>
+            <div class="case-study__meta-item">
+              <span class="case-study__meta-label">Timeline</span>
+              <span class="case-study__meta-value">4 months (Mar–Jul 2022)</span>
+            </div>
+          </div>
+        </header>
+
+        <section class="case-study__section">
+          <h3 class="case-study__section-title">
+            <span class="case-study__section-mark" aria-hidden="true"></span> Project Overview
+          </h3>
+          <div class="case-study__card">
+            <p>The Order Anywhere platform lacked an intuitive way to communicate order status for table orders and pickups. Customers were frustrated with limited updates via email, leading to uncertainty and frequent inquiries. The new Order Status feature provides customers with clear, estimated order updates directly through the platform, enhancing transparency and confidence in the ordering process.</p>
+            <h4>Key Goals</h4>
+            <ul class="case-study__findings">
+              <li>Provide clear order updates to reduce uncertainty.</li>
+              <li>Enable users to track their order status via intuitive visual indicators.</li>
+              <li>Improve operational efficiency by dynamically aligning updates with merchant-entered data.</li>
+            </ul>
+            <p><strong>Why This Matters:</strong> Empowering customers with timely updates builds trust, enhances the ordering experience, and drives satisfaction.</p>
+          </div>
+        </section>
+
+        <section class="case-study__section">
+          <h3 class="case-study__section-title">
+            <span class="case-study__section-mark" aria-hidden="true"></span> Problem Statement
+          </h3>
+          <div class="case-study__card">
+            <p>Customers struggled with uncertainty about their order status due to vague email updates that were often delayed or overlooked. This lack of transparency led to customer dissatisfaction and operational inefficiencies, with staff handling frequent inquiries about order readiness.</p>
+          </div>
+        </section>
+
+        <section class="case-study__section">
+          <h3 class="case-study__section-title">
+            <span class="case-study__section-mark" aria-hidden="true"></span> How Might We
+          </h3>
+          <div class="case-study__card case-study__card--accent">
+            <p><em>How might we design an intuitive, estimate-based Order Status feature that provides clarity and transparency for customers and improves restaurant operational efficiency?</em></p>
+          </div>
+        </section>
+
+        <section class="case-study__section">
+          <h3 class="case-study__section-title">
+            <span class="case-study__section-mark" aria-hidden="true"></span> Research
+          </h3>
+          <div class="case-study__card">
+            <p>To ensure a consumer-centered design process, the following methodologies were employed:</p>
+            <div class="case-study__process-grid">
+              <div class="process-step">
+                <span class="process-step__number">01</span>
+                <h4 class="process-step__title">Semi-Structured Interviews</h4>
+                <p>Conducted one-on-one interviews with 10 participants representing regular users of table ordering and pickup services. Allowed for in-depth exploration of user pain points, behaviors, and expectations while providing flexibility to probe specific areas of interest.</p>
+              </div>
+              <div class="process-step">
+                <span class="process-step__number">02</span>
+                <h4 class="process-step__title">Behavioral Analysis</h4>
+                <p>Observed user interaction patterns with existing order status systems through contextual scenarios. Helped identify gaps in current solutions, such as delayed email notifications or unclear status indicators, and provided insights into natural user behavior.</p>
+              </div>
+            </div>
+          </div>
+          <div class="case-study__insights">
+            <h4 class="case-study__insights-title">Key Insights</h4>
+            <ul class="case-study__insights-list">
+              <li><strong>Frustration with Uncertainty:</strong> Users felt anxious about not knowing when their orders would be ready, particularly during busy hours. Many cited that delayed or missed email notifications worsened their experience.</li>
+              <li><strong>Preference for In-Platform Updates:</strong> Participants preferred receiving updates directly on the ordering platform rather than relying on email. Notifications with estimated timelines were favored to reduce inquiries and provide clarity.</li>
+              <li><strong>Simplicity and Transparency:</strong> Clear visual indicators, such as progress bars or status labels, were widely requested. Users valued concise, approachable language like "approx. 15 minutes" to manage expectations.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="case-study__section">
+          <h3 class="case-study__section-title">
+            <span class="case-study__section-mark" aria-hidden="true"></span> Competitor Analysis
+          </h3>
+          <div class="case-study__card">
+            <p>This SWOT analysis focuses on the order status feature for it is critical to customer satisfaction, operational efficiency, and competitive differentiation in the food delivery market.</p>
+          </div>
+          <div class="case-study__image">
+            <img src="assets/order-status-competitor.jpg" alt="SWOT competitor analysis of order status features across food delivery platforms" loading="lazy" />
+          </div>
+        </section>
+
+        <section class="case-study__section">
+          <h3 class="case-study__section-title">
+            <span class="case-study__section-mark" aria-hidden="true"></span> User Flow Mapping
+          </h3>
+          <div class="case-study__card">
+            <p>Mapped the user flow for table orders and pickups, focusing on:</p>
+            <ul class="case-study__findings">
+              <li><strong>Order Confirmation:</strong> Customer receives estimated time for preparation.</li>
+              <li><strong>Preparation Stage:</strong> Progress bar updates based on milestones.</li>
+              <li><strong>Ready for Pickup/Table:</strong> Clear notification when the order is ready.</li>
+            </ul>
+          </div>
+          <div class="case-study__image">
+            <img src="assets/order-status-userflow.png" alt="User flow mapping for order status tracking" loading="lazy" />
+          </div>
+        </section>
+
+        <section class="case-study__section">
+          <h3 class="case-study__section-title">
+            <span class="case-study__section-mark" aria-hidden="true"></span> Hi-Fi Designs
+          </h3>
+          <div class="case-study__image">
+            <img src="assets/order-status-hifi.png" alt="Order Status hi-fi screens showing in-platform progress indicators" loading="lazy" />
+          </div>
+          <p class="case-study__image-caption">Order Status within the platform</p>
+          <div class="case-study__image">
+            <img src="assets/order-status-email.png" alt="Order status email notification designs" loading="lazy" />
+          </div>
+          <p class="case-study__image-caption">Email Notifications</p>
+          <div class="case-study__card case-study__card--accent">
+            <h4>How Research Shaped Design Goals</h4>
+            <ul class="case-study__findings">
+              <li>Semi-structured interviews revealed that vague and delayed updates were the biggest source of dissatisfaction, leading to the incorporation of <strong>clear, in-platform progress indicators</strong>.</li>
+              <li>Behavioral analysis highlighted the need for <strong>intuitive interfaces</strong> that provide quick access to updates without requiring excessive navigation.</li>
+              <li>Competitor benchmarking underscored the importance of <strong>visual feedback</strong> and <strong>managing expectations</strong> through language like "approx. 10–15 minutes" to foster user confidence.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="case-study__section">
+          <h3 class="case-study__section-title">
+            <span class="case-study__section-mark" aria-hidden="true"></span> User Testing
+          </h3>
+          <div class="case-study__card">
+            <p><strong>Objective:</strong> To validate the Order Status feature's usability, focusing on navigation, clarity of estimated timelines, and overall user satisfaction.</p>
+            <h4>Methodology</h4>
+            <ul class="case-study__findings">
+              <li><strong>Participants:</strong> 8 tech-savvy users familiar with table ordering and pickup platforms.</li>
+              <li><strong>Tasks:</strong> Locate order status, interpret progress indicators, and respond to notifications.</li>
+              <li><strong>Tools:</strong> Conducted via Maze, capturing qualitative and quantitative feedback.</li>
+            </ul>
+          </div>
+          <div class="case-study__stats">
+            <div class="stat">
+              <span class="stat__value">100%</span>
+              <span class="stat__label">Task Completion Rate</span>
+            </div>
+            <div class="stat">
+              <span class="stat__value">4.7/5</span>
+              <span class="stat__label">Satisfaction Score</span>
+            </div>
+          </div>
+          <div class="case-study__insights">
+            <h4 class="case-study__insights-title">Key Findings</h4>
+            <ul class="case-study__insights-list">
+              <li><strong>Progress Indicators:</strong> Provided clarity on order stages, reducing user anxiety.</li>
+              <li><strong>Estimated Timelines:</strong> Managed expectations with approximate times, though users requested brief explanations for accuracy.</li>
+              <li><strong>Notifications:</strong> Timely in-platform updates were well-received; as well as email notifications for critical updates.</li>
+              <li><strong>Navigation:</strong> Intuitive design made status easy to locate, with suggestions for tooltips to help first-time users.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="case-study__section">
+          <h3 class="case-study__section-title">
+            <span class="case-study__section-mark" aria-hidden="true"></span> Project Outcomes
+          </h3>
+          <div class="case-study__card">
+            <p>The redesigned Order Status feature achieved significant improvements:</p>
+            <ul class="case-study__findings">
+              <li><strong>Improved Transparency:</strong> Customers gained clear visibility into their order progress through intuitive progress indicators and estimated timelines.</li>
+              <li><strong>Reduced Inquiries:</strong> Proactive updates significantly minimized customer questions about order readiness.</li>
+              <li><strong>Enhanced User Satisfaction:</strong> Users appreciated the clarity, simplicity, and timeliness of the new Order Status feature.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="case-study__section">
+          <h3 class="case-study__section-title">
+            <span class="case-study__section-mark" aria-hidden="true"></span> Reflections
+          </h3>
+          <div class="case-study__card case-study__card--subtle">
+            <p>This project highlighted the importance of aligning user needs with clear, actionable design solutions. By emphasizing transparency and simplicity, we addressed key frustrations and improved the overall ordering experience. Future iterations could explore predictive notifications and optional push alerts to further enhance usability and customer satisfaction.</p>
+          </div>
+        </section>
+      </article>
+    </div>
+  </div>
+
+  <!-- Self-Delivery Case Study -->
+  <div class="modal" id="modal-self-delivery" aria-hidden="true">
+    <div class="modal__backdrop"></div>
+    <div class="modal__container">
+      <!-- Cover Image -->
+      <div class="case-study__cover">
+        <img src="assets/self-delivery-cover.jpg" alt="Self-delivery system cover showing devices mockup" loading="lazy" />
+      </div>
+      <button class="modal__close" aria-label="Close">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <article class="case-study">
+        <header class="case-study__header">
+          <div class="case-study__header-tags">
+            <span class="tag tag--pink">UX Design</span>
+            <span class="tag tag--blue">Product Design</span>
+            <span class="tag tag--neutral">UX Research</span>
+            <span class="tag tag--neutral">User Testing</span>
+          </div>
+          <h2 class="case-study__title">A Self-Delivery System for Order Anywhere</h2>
+          <p class="case-study__product">Order Anywhere — Lightspeed Commerce</p>
+          <div class="case-study__meta-grid">
+            <div class="case-study__meta-item">
+              <span class="case-study__meta-label">Role</span>
+              <span class="case-study__meta-value">Lead Product Designer</span>
+            </div>
+            <div class="case-study__meta-item">
+              <span class="case-study__meta-label">Timeline</span>
+              <span class="case-study__meta-value">6 months (Jun–Nov 2023)</span>
+            </div>
+          </div>
+        </header>
+
+        <section class="case-study__section">
+          <h3 class="case-study__section-title">
+            <span class="case-study__section-mark" aria-hidden="true"></span> Project Overview
+          </h3>
+          <div class="case-study__card">
+            <p>Third-party delivery services often impose high costs and limit restaurants' control over operations, negatively impacting profit margins and customer experiences. This project aimed to design a self-delivery feature for Order Anywhere, enabling restaurants to independently manage their deliveries while offering customers personalized and flexible delivery options, such as saved addresses and scheduled deliveries.</p>
+            <h4>Key Goals</h4>
+            <ul class="case-study__findings">
+              <li><strong>Reduce Costs:</strong> Enable restaurants to eliminate reliance on third-party platforms and retain more revenue.</li>
+              <li><strong>Improve Customer Experience:</strong> Provide tailored delivery options, such as saved addresses and scheduling.</li>
+              <li><strong>Increase Control:</strong> Allow restaurants to define delivery ranges, fees, and timelines for consistent service.</li>
+              <li><strong>Simplify Use:</strong> Ensure the system is intuitive for both restaurant staff and customers.</li>
+            </ul>
+            <p>By addressing these pain points, the self-delivery feature strengthens restaurant profitability, builds trust with customers, and creates a seamless ordering experience.</p>
+          </div>
+        </section>
+
+        <section class="case-study__section">
+          <h3 class="case-study__section-title">
+            <span class="case-study__section-mark" aria-hidden="true"></span> Problem Statement
+          </h3>
+          <div class="case-study__card">
+            <p>Restaurants relying on third-party delivery services face significant challenges that erode profitability and customer trust. Customers, in turn, encounter inconsistent service and lack the personalized options — such as saved addresses and flexible scheduling — that modern diners expect.</p>
+          </div>
+        </section>
+
+        <section class="case-study__section">
+          <h3 class="case-study__section-title">
+            <span class="case-study__section-mark" aria-hidden="true"></span> How Might We
+          </h3>
+          <div class="case-study__card case-study__card--accent">
+            <p><em>How might we create an intuitive and efficient self-delivery feature that empowers restaurant owners to manage deliveries while enhancing customer convenience with personalized options and flexible scheduling?</em></p>
+          </div>
+        </section>
+
+        <section class="case-study__section">
+          <h3 class="case-study__section-title">
+            <span class="case-study__section-mark" aria-hidden="true"></span> Research
+          </h3>
+          <div class="case-study__card">
+            <p>To design a self-delivery feature tailored to both restaurant and customer needs, we employed the following research methods:</p>
+            <div class="case-study__process-grid">
+              <div class="process-step">
+                <span class="process-step__number">01</span>
+                <h4 class="process-step__title">Stakeholder Interviews</h4>
+                <p>Restaurant owners and managers. Identified operational challenges with third-party platforms, including high fees, lack of delivery control, and customer dissatisfaction.</p>
+              </div>
+              <div class="process-step">
+                <span class="process-step__number">02</span>
+                <h4 class="process-step__title">Customer Surveys</h4>
+                <p>60 frequent users of online food ordering platforms. Explored preferences for delivery features, such as saved addresses, scheduling, and communication directly from restaurants.</p>
+              </div>
+            </div>
+          </div>
+          <div class="case-study__insights">
+            <h4 class="case-study__insights-title">Key Findings</h4>
+            <ul class="case-study__insights-list">
+              <li><strong>Restaurant Insights:</strong> High fees from third-party platforms heavily impact profits. Restaurants need greater autonomy over delivery timelines, fees, and customer interactions.</li>
+              <li><strong>Customer Insights:</strong> 70% wanted saved address functionality for faster checkout. 65% valued flexible delivery scheduling to suit their availability. 80% preferred direct updates from the restaurant instead of relying on third-party systems.</li>
+            </ul>
+            <div class="case-study__stats case-study__stats--inline">
+              <div class="stat stat--small">
+                <span class="stat__value">70%</span>
+                <span class="stat__label">Wanted saved addresses</span>
+              </div>
+              <div class="stat stat--small">
+                <span class="stat__value">65%</span>
+                <span class="stat__label">Valued flexible scheduling</span>
+              </div>
+              <div class="stat stat--small">
+                <span class="stat__value">80%</span>
+                <span class="stat__label">Preferred direct updates</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="case-study__section">
+          <h3 class="case-study__section-title">
+            <span class="case-study__section-mark" aria-hidden="true"></span> Competitor Analysis
+          </h3>
+          <div class="case-study__card">
+            <p>Leading platforms such as Uber Eats and DoorDash were evaluated to uncover best practices and identify gaps in delivery workflows and customer experience, informing the design of a more tailored and efficient solution.</p>
+          </div>
+          <div class="case-study__image">
+            <img src="assets/self-delivery-competitor.jpg" alt="Competitor analysis of delivery platforms including Uber Eats and DoorDash" loading="lazy" />
+          </div>
+        </section>
+
+        <section class="case-study__section">
+          <h3 class="case-study__section-title">
+            <span class="case-study__section-mark" aria-hidden="true"></span> User Flow Mapping
+          </h3>
+          <div class="case-study__card">
+            <p>Mapped the user journey for both restaurant staff and consumers, ensuring seamless integration and clarity:</p>
+            <ul class="case-study__findings">
+              <li><strong>Restaurant Staff Workflow:</strong> Designed the process for managing self-delivery, including enabling the feature, setting delivery ranges, pricing, and providing status updates.</li>
+              <li><strong>Consumer Experience Flow:</strong> Focused on the customer's journey from order placement to delivery, emphasizing features like saved addresses, scheduling, and status notifications.</li>
+            </ul>
+          </div>
+          <div class="case-study__image">
+            <img src="assets/self-delivery-admin-flow.jpg" alt="Restaurant admin user flow for self-delivery management" loading="lazy" />
+          </div>
+          <p class="case-study__image-caption">Restaurant admin flow</p>
+          <div class="case-study__image">
+            <img src="assets/self-delivery-consumer-flow.jpg" alt="Consumer user flow for ordering with self-delivery" loading="lazy" />
+          </div>
+          <p class="case-study__image-caption">Consumer flow</p>
+        </section>
+
+        <section class="case-study__section">
+          <h3 class="case-study__section-title">
+            <span class="case-study__section-mark" aria-hidden="true"></span> Hi-Fi Designs
+          </h3>
+          <p class="case-study__subsection-label">For restaurants</p>
+          <div class="case-study__image-grid">
+            <img src="assets/self-delivery-hifi.png" alt="Restaurant self-delivery admin hi-fi design" loading="lazy" />
+            <img src="assets/self-delivery-restaurant-hifi-2.png" alt="Restaurant self-delivery configuration hi-fi design" loading="lazy" />
+          </div>
+          <p class="case-study__subsection-label">For consumers</p>
+          <div class="case-study__image-grid">
+            <img src="assets/self-delivery-consumer-hifi-1.png" alt="Consumer delivery ordering screen" loading="lazy" />
+            <img src="assets/self-delivery-consumer-hifi-2.png" alt="Consumer delivery address selection" loading="lazy" />
+          </div>
+          <div class="case-study__image-grid">
+            <img src="assets/self-delivery-consumer-hifi-3.png" alt="Consumer delivery scheduling screen" loading="lazy" />
+            <img src="assets/self-delivery-consumer-hifi-4.png" alt="Consumer delivery status tracking screen" loading="lazy" />
+          </div>
+        </section>
+
+        <section class="case-study__section">
+          <h3 class="case-study__section-title">
+            <span class="case-study__section-mark" aria-hidden="true"></span> User Testing
+          </h3>
+          <div class="case-study__card">
+            <h4>Consumer-Side Testing</h4>
+            <p><strong>Methods:</strong></p>
+            <ul class="case-study__findings">
+              <li><strong>Task-Based Testing:</strong> 10 consumers familiar with online food delivery platforms. Scenarios included saving addresses for future orders, scheduling deliveries for specific times, and switching between pickup and delivery options.</li>
+              <li><strong>Think-Aloud Protocol:</strong> Participants verbalized their thoughts while interacting with the prototype to identify pain points and validate usability.</li>
+            </ul>
+            <p><strong>Key Findings:</strong></p>
+            <ul class="case-study__findings">
+              <li><strong>Ease of Navigation:</strong> 90% of participants completed tasks smoothly, praising the intuitive design.</li>
+              <li><strong>Saved Addresses:</strong> 75% found this feature significantly reduced checkout time and improved convenience.</li>
+              <li><strong>Estimated Timelines:</strong> Users valued approximate delivery times but wanted explanations for accuracy (e.g., "based on current workload").</li>
+            </ul>
+          </div>
+          <div class="case-study__card">
+            <h4>Restaurant Staff Testing</h4>
+            <p><strong>Methods:</strong></p>
+            <ul class="case-study__findings">
+              <li><strong>Task-Based Testing:</strong> 6 restaurant staff members, including managers and delivery coordinators. Scenarios included enabling self-delivery, setting delivery ranges, adjusting delivery times dynamically, and managing notifications.</li>
+              <li><strong>Observation Sessions:</strong> Monitored staff interactions with the prototype in simulated workflow scenarios to assess operational fit and ease of use.</li>
+            </ul>
+            <p><strong>Key Findings:</strong></p>
+            <ul class="case-study__findings">
+              <li><strong>Feature Enablement:</strong> Staff appreciated the straightforward process for enabling self-delivery and configuring settings.</li>
+              <li><strong>Delivery Configuration:</strong> The ability to set custom delivery ranges, prices, and estimated times provided flexibility, but some staff suggested tooltips for first-time users.</li>
+              <li><strong>Ease of Use:</strong> 85% found the interface simple and intuitive, reducing the need for extensive training.</li>
+              <li><strong>Dynamic Adjustments:</strong> Real-time adjustment options for delivery times were praised, especially during peak hours.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="case-study__section">
+          <h3 class="case-study__section-title">
+            <span class="case-study__section-mark" aria-hidden="true"></span> Project Outcomes
+          </h3>
+          <div class="case-study__card">
+            <p>The self-delivery feature addressed key challenges, enabling restaurants to reduce third-party reliance, retain more revenue, and streamline operations. Consumers benefited from saved addresses, flexible scheduling, and real-time updates, enhancing convenience and satisfaction. Restaurant staff gained tools for managing delivery settings and timelines efficiently.</p>
+          </div>
+        </section>
+
+        <section class="case-study__section">
+          <h3 class="case-study__section-title">
+            <span class="case-study__section-mark" aria-hidden="true"></span> Reflections
+          </h3>
+          <div class="case-study__card case-study__card--subtle">
+            <p>This project underscored the importance of designing for both operational efficiency and user convenience. Flexible delivery tools and clear communication features were key to its success. Future iterations could explore predictive timelines and enhanced analytics for further optimization.</p>
+          </div>
+        </section>
+      </article>
+    </div>
+  </div>
+
+  <!-- POS Notifications Case Study -->
+  <div class="modal" id="modal-pos-notifications" aria-hidden="true">
+    <div class="modal__backdrop"></div>
+    <div class="modal__container">
+      <!-- Cover Image -->
+      <div class="case-study__cover">
+        <img src="assets/pos-notifications-cover.jpg" alt="POS notifications redesign cover showing notification system" loading="lazy" />
+      </div>
+      <button class="modal__close" aria-label="Close">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <article class="case-study">
+        <header class="case-study__header">
+          <div class="case-study__header-tags">
+            <span class="tag tag--pink">UX Design</span>
+            <span class="tag tag--blue">Product Design</span>
+            <span class="tag tag--neutral">UX Research</span>
+            <span class="tag tag--neutral">User Testing</span>
+          </div>
+          <h2 class="case-study__title">Revamping POS Notifications</h2>
+          <p class="case-study__product">POS System — Lightspeed Commerce</p>
+          <div class="case-study__meta-grid">
+            <div class="case-study__meta-item">
+              <span class="case-study__meta-label">Role</span>
+              <span class="case-study__meta-value">Lead Product Designer</span>
+            </div>
+            <div class="case-study__meta-item">
+              <span class="case-study__meta-label">Timeline</span>
+              <span class="case-study__meta-value">5 months (Dec 2021–Apr 2022)</span>
+            </div>
+          </div>
+        </header>
+
+        <section class="case-study__section">
+          <h3 class="case-study__section-title">
+            <span class="case-study__section-mark" aria-hidden="true"></span> Project Overview
+          </h3>
+          <div class="case-study__card">
+            <p>In the fast-paced service industry, effective communication is critical for seamless operations. Lightspeed POS's notification system faced challenges in discoverability and usability, resulting in missed alerts for critical issues like printer errors and connectivity disruptions.</p>
+            <p>To address these issues, we redesigned the notification system to provide:</p>
+            <ul class="case-study__findings">
+              <li><strong>Improved Visibility:</strong> A prominent notification icon for real-time alerts.</li>
+              <li><strong>Clear Messaging:</strong> Simplified, actionable notifications.</li>
+              <li><strong>Interactive Elements:</strong> Direct-action options for quick issue resolution.</li>
+            </ul>
+            <p><strong>Why This Matters:</strong> Enhancing the notification system empowers users, improves operational efficiency, and positions Lightspeed POS as a trusted tool in high-pressure environments.</p>
+          </div>
+        </section>
+
+        <section class="case-study__section">
+          <h3 class="case-study__section-title">
+            <span class="case-study__section-mark" aria-hidden="true"></span> Problem Statement
+          </h3>
+          <div class="case-study__card">
+            <p>The notification system failed to support users effectively due to:</p>
+            <ul class="case-study__findings">
+              <li><strong>Low Discoverability:</strong> Users were unaware of its existence.</li>
+              <li><strong>Ambiguous Icons:</strong> Confusing iconography delayed actions.</li>
+              <li><strong>Missed Alerts:</strong> Critical operational issues went unnoticed.</li>
+              <li><strong>Inefficient Workflows:</strong> Users struggled to respond to issues promptly, leading to downtime and service disruptions.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="case-study__section">
+          <h3 class="case-study__section-title">
+            <span class="case-study__section-mark" aria-hidden="true"></span> How Might We
+          </h3>
+          <div class="case-study__card case-study__card--accent">
+            <p><em>How might we design an intuitive and actionable notification system that ensures critical alerts are easily discovered, understood, and acted upon to enhance operational efficiency in high-pressure environments?</em></p>
+          </div>
+        </section>
+
+        <section class="case-study__section">
+          <h3 class="case-study__section-title">
+            <span class="case-study__section-mark" aria-hidden="true"></span> Research
+          </h3>
+          <div class="case-study__card">
+            <h4>User Research</h4>
+            <p>To understand user pain points and needs, I employed the following methods:</p>
+            <div class="case-study__process-grid">
+              <div class="process-step">
+                <span class="process-step__number">01</span>
+                <h4 class="process-step__title">Contextual Inquiry</h4>
+                <p>Observed users interacting with the POS system during peak operations, uncovering their challenges and decision-making processes.</p>
+              </div>
+              <div class="process-step">
+                <span class="process-step__number">02</span>
+                <h4 class="process-step__title">Stakeholder Interviews</h4>
+                <p>Collaborated with restaurant managers, service staff, and technical teams to understand workflows and technical constraints.</p>
+              </div>
+              <div class="process-step">
+                <span class="process-step__number">03</span>
+                <h4 class="process-step__title">Diary Studies</h4>
+                <p>Collected data from users over a week, documenting their frustrations, successes, and emotional responses to the current notification system.</p>
+              </div>
+            </div>
+            <h4>Key Insights</h4>
+            <ul class="case-study__findings">
+              <li>Users frequently missed alerts due to poor visibility and unclear messaging.</li>
+              <li>Service staff required actionable notifications to resolve issues quickly.</li>
+              <li>Restaurant workflows varied significantly, necessitating a flexible design.</li>
+            </ul>
+          </div>
+          <div class="case-study__card">
+            <h4>Market Research</h4>
+            <p>The global POS market, valued at $11.99 billion in 2022, is growing at a CAGR of 10.8%. Trends emphasize real-time updates, cloud-based solutions, and user-friendly systems. These insights highlighted the need for clear, accessible notification systems to improve operational efficiency.</p>
+          </div>
+        </section>
+
+        <section class="case-study__section">
+          <h3 class="case-study__section-title">
+            <span class="case-study__section-mark" aria-hidden="true"></span> Personas
+          </h3>
+          <div class="case-study__card">
+            <p>Based on research, I developed three primary personas:</p>
+          </div>
+          <div class="case-study__image">
+            <img src="assets/pos-personas.jpg" alt="Three primary personas for the POS notification system redesign" loading="lazy" />
+          </div>
+        </section>
+
+        <section class="case-study__section">
+          <h3 class="case-study__section-title">
+            <span class="case-study__section-mark" aria-hidden="true"></span> User Flow Mapping
+          </h3>
+          <div class="case-study__card">
+            <p>I mapped the user flow, ensuring minimal friction during high-pressure scenarios.</p>
+          </div>
+          <div class="case-study__image">
+            <img src="assets/pos-userflow.jpg" alt="POS notification system user flow mapping" loading="lazy" />
+          </div>
+        </section>
+
+        <section class="case-study__section">
+          <h3 class="case-study__section-title">
+            <span class="case-study__section-mark" aria-hidden="true"></span> Early Design Explorations
+          </h3>
+          <div class="case-study__image-grid">
+            <img src="assets/pos-early-exploration-1.jpg" alt="Early design exploration for POS notifications" loading="lazy" />
+            <img src="assets/pos-early-exploration-2.jpg" alt="Early design exploration for POS notifications" loading="lazy" />
+          </div>
+        </section>
+
+        <section class="case-study__section">
+          <h3 class="case-study__section-title">
+            <span class="case-study__section-mark" aria-hidden="true"></span> Hi-Fi Designs
+          </h3>
+          <div class="case-study__image-grid">
+            <img src="assets/pos-notifications-hifi.png" alt="POS register screen with redesigned notification panel" loading="lazy" />
+            <img src="assets/pos-hifi-2.png" alt="POS notification detail view hi-fi design" loading="lazy" />
+          </div>
+          <div class="case-study__card case-study__card--accent">
+            <h4>How Personas Shaped Design Goals</h4>
+            <ul class="case-study__findings">
+              <li><strong>Visibility and Clarity:</strong> Service staff emphasized the need for a prominent notification icon and clear messaging to handle high-pressure workflows.</li>
+              <li><strong>Actionability and Prioritization:</strong> Restaurant owners highlighted the importance of categorization and actionable alerts for effective operational management.</li>
+              <li><strong>Ease of Use:</strong> Hotel bar staff inspired simplified language and intuitive designs to accommodate varying levels of technical expertise and experience.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="case-study__section">
+          <h3 class="case-study__section-title">
+            <span class="case-study__section-mark" aria-hidden="true"></span> User Testing
+          </h3>
+          <div class="case-study__card">
+            <h4>Scenario-Based Testing</h4>
+            <p><strong>Approach:</strong> Simulated real-world scenarios where users addressed notifications during peak hours. Tasks included identifying and resolving printer errors.</p>
+            <p><strong>Metrics Collected:</strong> Time to locate notifications, resolution time, and error rates.</p>
+            <h4>A/B Testing</h4>
+            <p><strong>Approach:</strong> Compared redesigned notification icons and messaging against the existing system to measure improvements in usability.</p>
+            <h4>Findings</h4>
+            <ul class="case-study__findings">
+              <li>Repositioned notifications to the top of the screen and redesigned icons improved discoverability by 30%.</li>
+              <li>Clear messaging reduced resolution time by 25%.</li>
+            </ul>
+          </div>
+          <div class="case-study__stats">
+            <div class="stat">
+              <span class="stat__value">+30%</span>
+              <span class="stat__label">Improved Discoverability</span>
+            </div>
+            <div class="stat">
+              <span class="stat__value">+25%</span>
+              <span class="stat__label">Faster Resolution Time</span>
+            </div>
+          </div>
+          <div class="case-study__card case-study__card--accent">
+            <p>These insights drove targeted improvements, ensuring the redesigned notification center met user needs and streamlined daily operations.</p>
+          </div>
+        </section>
+
+        <section class="case-study__section">
+          <h3 class="case-study__section-title">
+            <span class="case-study__section-mark" aria-hidden="true"></span> Project Outcomes
+          </h3>
+          <div class="case-study__card">
+            <p>The redesigned notification system delivered measurable improvements:</p>
+            <ul class="case-study__findings">
+              <li><strong>25% Reduction in User Churn:</strong> Enhanced usability and operational efficiency.</li>
+              <li><strong>Faster Issue Resolution:</strong> Actionable alerts minimized disruptions.</li>
+              <li><strong>Increased Satisfaction:</strong> Positive feedback validated the design's impact.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="case-study__section">
+          <h3 class="case-study__section-title">
+            <span class="case-study__section-mark" aria-hidden="true"></span> Reflections
+          </h3>
+          <div class="case-study__card case-study__card--subtle">
+            <p>By focusing on discoverability, clarity, and actionability, we created a notification system that improved efficiency and reduced frustration. Key takeaways include the value of iterative testing and cross-functional collaboration in aligning technical constraints with user needs. The solution's success demonstrates how thoughtful design can streamline workflows, enhance satisfaction, and build trust. Future iterations could include predictive notifications and customizable settings to further support evolving user workflows and needs.</p>
+          </div>
+        </section>
+      </article>
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- PROCESS                                      -->
+  <!-- ============================================ -->
+  <section class="workflow" id="workflow" style="position: relative;">
+    <div class="floater atm-bloom atm-bloom--sm" style="top: 10%; left: -8%;" data-parallax="0.1" aria-hidden="true"></div>
+    <div class="floater atm-bloom atm-bloom--sm" style="bottom: 0%; right: -10%;" data-parallax="0.07" aria-hidden="true"></div>
+    <div class="floater floater--chip" style="top: 24%; right: 5%;" data-parallax="0.28" aria-hidden="true"></div>
+    <div class="floater floater--chip" style="bottom: 18%; left: 2%;" data-parallax="0.22" aria-hidden="true"></div>
+    <div class="floater floater--strip" style="top: 62%; right: 9%;" data-parallax="0.38" aria-hidden="true"></div>
+    <div class="floater floater--tab" style="bottom: 32%; left: 4%;" data-parallax="0.18" aria-hidden="true">sys.02</div>
+    <div class="floater floater--card" style="top: 44%; right: 3%;" data-parallax="0.32" aria-hidden="true"></div>
+
+    <div class="section-rule">
+      <div class="container section-rule__inner">
+        <span class="section-rule__label">02 / How I Work</span>
+        <span class="section-rule__line"></span>
+        <span class="section-rule__note">Design process</span>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="workflow__layout animate-in">
+        <div class="workflow__statement">
+          <p class="workflow__marker">
+            <span class="workflow__marker-line"></span>
+            Process
+          </p>
+          <p class="workflow__intro">Research, framing, design, iteration — in that order. The quality of the outcome depends on the quality of the decisions made early.</p>
+        </div>
+        <div class="workflow__pillars animate-in" data-delay="1">
+          <div class="workflow__pillar">
+            <span class="workflow__pillar-label">Research &amp; insight</span>
+            <p>I start by listening — to users, to data, to the gaps between what people say and what they do. Research isn't a deliverable. It's how I figure out which question is actually worth answering.</p>
+          </div>
+          <div class="workflow__pillar">
+            <span class="workflow__pillar-label">Problem framing</span>
+            <p>Before any interface, I spend time making the problem legible. Misframing the problem makes every design decision downstream fragile. Getting this right is where most of the real value is.</p>
+          </div>
+          <div class="workflow__pillar">
+            <span class="workflow__pillar-label">Design &amp; iteration</span>
+            <p>I design for clarity and usability, not novelty. Flows get simplified until they make sense. Copy gets pressure-tested. Edge cases get considered. I refine until the experience holds up under realistic conditions.</p>
+          </div>
+          <div class="workflow__pillar">
+            <span class="workflow__pillar-label">Selective AI acceleration</span>
+            <p>AI earns time back on the parts that don't need my judgment — generating variants, moving through scaffolding, structuring documentation. That time goes back into research and decisions.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- ABOUT / BACKGROUND                           -->
+  <!-- ============================================ -->
+  <section class="about" id="about">
+    <div class="section-rule">
+      <div class="container section-rule__inner">
+        <span class="section-rule__label">03 / Background</span>
+        <span class="section-rule__line"></span>
+        <span class="section-rule__note">5+ years in product design</span>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="about__layout animate-in">
+
+        <!-- Left: Experience -->
+        <div class="about__experience">
+          <p class="about__group-label">Experience</p>
+          <ol class="about__timeline">
+            <li class="about__role">
+              <span class="about__role-period">2025 — Present</span>
+              <div class="about__role-detail">
+                <span class="about__role-title">Product Designer</span>
+                <span class="about__role-company">Lovehoney Group · Berlin</span>
+              </div>
+            </li>
+            <li class="about__role">
+              <span class="about__role-period">2021 — 2024</span>
+              <div class="about__role-detail">
+                <span class="about__role-title">Product Designer</span>
+                <span class="about__role-company">Lightspeed Commerce · Berlin</span>
+              </div>
+            </li>
+            <li class="about__role">
+              <span class="about__role-period">2019 — 2020</span>
+              <div class="about__role-detail">
+                <span class="about__role-title">E-Commerce Specialist</span>
+                <span class="about__role-company">Monoprice · Berlin</span>
+              </div>
+            </li>
+            <li class="about__role">
+              <span class="about__role-period">2018 — 2019</span>
+              <div class="about__role-detail">
+                <span class="about__role-title">Product Operations Specialist</span>
+                <span class="about__role-company">Highsnobiety · Berlin</span>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+        <!-- Right: Skills / Education / Languages / Download -->
+        <div class="about__info">
+          <div class="about__info-group">
+            <p class="about__group-label">Skills</p>
+            <div class="about__tags">
+              <span class="tax">User Research</span>
+              <span class="tax">Information Architecture</span>
+              <span class="tax">Interaction Design</span>
+              <span class="tax">Design Systems</span>
+              <span class="tax">Agile</span>
+              <span class="tax">Figma</span>
+              <span class="tax">Stakeholder Management</span>
+            </div>
+          </div>
+          <div class="about__info-group">
+            <p class="about__group-label">Education</p>
+            <ul class="about__edu-list">
+              <li>UX/UI Design — Ironhack, Berlin</li>
+              <li>UX Research — Memorisely</li>
+              <li>BA European Cultures — Europa University</li>
+            </ul>
+          </div>
+          <div class="about__info-group">
+            <p class="about__group-label">Languages</p>
+            <ul class="about__edu-list">
+              <li>English · German · Albanian · Spanish</li>
+            </ul>
+          </div>
+          <a href="assets/resume.pdf" download="Ina-Lile-Resume.pdf" class="cta-read about__info-group">
+            <span>Download CV</span>
+            <span class="cta-read__rule" aria-hidden="true"></span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M8 2v8M4 7l4 4 4-4M2 13h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- CONTACT                                      -->
+  <!-- ============================================ -->
+  <section class="contact" id="contact" style="position: relative;">
+    <div class="floater atm-bloom atm-bloom--secondary" style="top: -8%; left: -4%;" data-parallax="0.05" aria-hidden="true"></div>
+    <div class="floater atm-bloom atm-bloom--sm" style="bottom: -12%; right: -8%;" data-parallax="0.06" aria-hidden="true"></div>
+    <div class="floater floater--chip" style="top: 18%; right: 7%;" data-parallax="0.26" aria-hidden="true"></div>
+    <div class="floater floater--strip" style="bottom: 28%; right: 12%;" data-parallax="0.4" aria-hidden="true"></div>
+    <div class="floater floater--tab" style="top: 52%; left: 3%;" data-parallax="0.2" aria-hidden="true">msg.01</div>
+    <div class="container">
+      <div class="contact__layout animate-in">
+        <div class="contact__text">
+          <h2 class="contact__title">Let's build something<br>worth the research<span class="contact__dot">.</span></h2>
+          <p class="contact__desc">Interested in working together? I'd love to hear about your project.</p>
+        </div>
+        <div class="contact__actions">
+          <a href="mailto:blerina.lile@gmail.com" class="cta-read cta-read--lg">
+            <span>blerina.lile@gmail.com</span>
+            <span class="cta-read__rule" aria-hidden="true"></span>
+            <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener" class="cta-read">
+            <span>LinkedIn</span>
+            <span class="cta-read__rule" aria-hidden="true"></span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4v7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="assets/resume.pdf" download="Ina-Lile-Resume.pdf" class="cta-read">
+            <span>Download CV</span>
+            <span class="cta-read__rule" aria-hidden="true"></span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M8 2v8M4 7l4 4 4-4M2 13h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- FOOTER                                       -->
+  <!-- ============================================ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__text">Ina Lile &mdash; 2026</p>
+      <p class="footer__text footer__text--subtle">Designed with intention, built with care.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
