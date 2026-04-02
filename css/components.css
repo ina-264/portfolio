@@ -155,6 +155,13 @@
 }
 
 @media (max-width: 768px) {
+  /* Remove backdrop-filter so fixed children position relative to viewport, not nav */
+  .nav {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background: #100608;
+  }
+
   .nav__toggle { display: flex; }
 
   .nav__links {
