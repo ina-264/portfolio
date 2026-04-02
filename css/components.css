@@ -159,7 +159,7 @@
 
   .nav__links {
     position: fixed;
-    top: 56px;
+    top: 0;
     left: 0;
     right: 0;
     bottom: 0;
@@ -168,8 +168,7 @@
     align-items: center;
     gap: var(--space-8);
     background: #100608;
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    z-index: var(--z-overlay);
     transform: translateX(100%);
     transition: transform var(--duration-slow) var(--ease-out);
   }
