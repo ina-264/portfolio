@@ -654,16 +654,36 @@ body.loading .hero {
 
 /* --- Mobile adjustments for floating elements --- */
 @media (max-width: 768px) {
+  /* Disable parallax on touch — keep floaters in their CSS positions */
   .floater {
-    display: none;
+    translate: 0 0 !important;
   }
 
-  .floater--hero-only {
-    display: block;
-    opacity: 0;
+  /* Scale large blooms down to fit mobile viewport */
+  .atm-bloom--primary {
+    width: 380px;
+    height: 300px;
+    filter: blur(80px) contrast(0.97);
   }
 
-  .floater--hero-only.floater--visible {
-    opacity: 0.35;
+  .atm-bloom--secondary {
+    width: 200px;
+    height: 160px;
+    filter: blur(60px) contrast(0.97);
+  }
+
+  .atm-bloom--sm {
+    width: 220px;
+    height: 180px;
+    filter: blur(60px) contrast(0.97);
+  }
+
+  /* Tone down small floaters slightly so they don't crowd content */
+  .floater--chip,
+  .floater--strip,
+  .floater--tab,
+  .floater--card,
+  .floater--caption {
+    opacity: 0.5;
   }
 }
