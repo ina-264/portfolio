@@ -26,14 +26,18 @@
         <span class="nav__toggle-bar"></span>
         <span class="nav__toggle-bar"></span>
       </button>
-      <ul class="nav__links" id="navLinks">
-        <li><a href="#work" class="nav__link">Work</a></li>
-        <li><a href="#workflow" class="nav__link">Process</a></li>
-        <li><a href="#about" class="nav__link">About</a></li>
-        <li><a href="#contact" class="nav__link nav__link--cta">Get in touch <span class="nav__arrow">&rarr;</span></a></li>
-      </ul>
     </div>
   </nav>
+
+  <!-- Mobile nav overlay — sibling of nav so backdrop-filter doesn't affect fixed positioning -->
+  <div class="nav__overlay" id="navOverlay" aria-hidden="true">
+    <ul class="nav__links" id="navLinks">
+      <li><a href="#work" class="nav__link">Work</a></li>
+      <li><a href="#workflow" class="nav__link">Process</a></li>
+      <li><a href="#about" class="nav__link">About</a></li>
+      <li><a href="#contact" class="nav__link nav__link--cta">Get in touch <span class="nav__arrow">&rarr;</span></a></li>
+    </ul>
+  </div>
 
   <!-- ============================================ -->
   <!-- HERO — Editorial Opening Spread              -->

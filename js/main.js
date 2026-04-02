@@ -128,19 +128,22 @@
 
   // --- Mobile nav toggle ---
   const navToggle = document.getElementById('navToggle');
+  const navOverlay = document.getElementById('navOverlay');
   const navLinks = document.getElementById('navLinks');
 
   navToggle.addEventListener('click', () => {
     const isOpen = navToggle.getAttribute('aria-expanded') === 'true';
     navToggle.setAttribute('aria-expanded', !isOpen);
-    navLinks.classList.toggle('nav__links--open');
+    navOverlay.classList.toggle('nav__overlay--open');
+    navOverlay.setAttribute('aria-hidden', isOpen);
     document.body.style.overflow = isOpen ? '' : 'hidden';
   });
 
   navLinks.querySelectorAll('.nav__link').forEach((link) => {
     link.addEventListener('click', () => {
       navToggle.setAttribute('aria-expanded', 'false');
-      navLinks.classList.remove('nav__links--open');
+      navOverlay.classList.remove('nav__overlay--open');
+      navOverlay.setAttribute('aria-hidden', 'true');
       document.body.style.overflow = '';
     });
   });
