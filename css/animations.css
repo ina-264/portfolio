@@ -143,8 +143,8 @@
 }
 
 @keyframes floatFade {
-  0%, 100% { opacity: 0.55; }
-  50%      { opacity: 0.92; }
+  0%, 100% { opacity: 0.75; }
+  50%      { opacity: 1; }
 }
 
 /* Arrow launch — tilts up then snaps straight */
@@ -210,28 +210,28 @@
 
 /* Annotation tab */
 .floater--tab {
-  background: rgba(49, 92, 255, 0.05);
-  border: 1px solid rgba(49, 92, 255, 0.14);
+  background: rgba(49, 92, 255, 0.10);
+  border: 1px solid rgba(49, 92, 255, 0.30);
   border-radius: var(--radius-sm);
   padding: var(--space-1) var(--space-3);
   font-family: var(--font-mono);
   font-size: 10px;
   letter-spacing: var(--tracking-wider);
   text-transform: uppercase;
-  color: var(--text-tertiary);
+  color: var(--text-secondary);
   animation: floatDrift 11s ease-in-out infinite,
              floatFade 7s ease-in-out infinite 1.5s;
 }
 
 /* Caption block */
 .floater--caption {
-  background: rgba(36, 63, 174, 0.05);
+  background: rgba(36, 63, 174, 0.10);
   border-left: 2px solid var(--accent-muted);
   padding: var(--space-2) var(--space-3);
   font-family: var(--font-mono);
   font-size: 9px;
   letter-spacing: var(--tracking-wide);
-  color: rgba(110, 127, 184, 0.70);
+  color: rgba(110, 127, 184, 0.95);
   animation: floatDriftAlt 15s ease-in-out infinite;
   max-width: 120px;
   line-height: 1.4;
@@ -242,7 +242,7 @@
   font-family: var(--font-mono);
   font-size: var(--text-5xl);
   font-weight: 800;
-  color: rgba(49, 92, 255, 0.05);
+  color: rgba(49, 92, 255, 0.14);
   line-height: 1;
   animation: floatDrift 18s ease-in-out infinite;
   user-select: none;
@@ -678,12 +678,10 @@ body.loading .hero {
     filter: blur(60px) contrast(0.97);
   }
 
-  /* Tone down small floaters slightly so they don't crowd content */
+  /* Tone down non-text floaters slightly on mobile */
   .floater--chip,
   .floater--strip,
-  .floater--tab,
-  .floater--card,
-  .floater--caption {
+  .floater--card {
     opacity: 0.5;
   }
 }

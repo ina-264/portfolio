@@ -39,7 +39,7 @@
   gap: 4px;
   font-size: var(--text-base);
   font-weight: 800;
-  letter-spacing: var(--tracking-normal);
+  letter-spacing: 0.18em;
   color: var(--text-primary);
   transition: color var(--duration-fast) var(--ease-out);
 }
@@ -49,11 +49,14 @@
 }
 
 .nav__logo-dot {
-  width: 8px;
-  height: 8px;
+  width: 5px;
+  height: 5px;
   border-radius: var(--radius-full);
   background: var(--accent-vivid);
   flex-shrink: 0;
+  align-self: flex-end;
+  margin-bottom: 2px;
+  margin-left: 1px;
 }
 
 .nav__links {
