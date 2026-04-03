@@ -912,9 +912,9 @@
 
 .contact__layout {
   display: grid;
-  grid-template-columns: 1.5fr 1fr;
+  grid-template-columns: 1fr 1.1fr;
   gap: var(--space-16);
-  align-items: center;
+  align-items: start;
 }
 
 .contact__title {
@@ -937,6 +937,90 @@
   flex-direction: column;
   gap: var(--space-4);
   align-items: flex-start;
+  margin-top: var(--space-8);
+}
+
+/* Contact form */
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.contact__field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.contact__label {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wider);
+  color: var(--text-tertiary);
+}
+
+.contact__input {
+  width: 100%;
+  background: var(--bg-elevated);
+  border: 1px solid var(--line-subtle);
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-4);
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  color: var(--text-primary);
+  transition: border-color var(--duration-fast) var(--ease-out),
+              box-shadow var(--duration-fast) var(--ease-out);
+  outline: none;
+  box-sizing: border-box;
+}
+
+.contact__input::placeholder {
+  color: var(--text-tertiary);
+}
+
+.contact__input:focus {
+  border-color: var(--accent-vivid);
+  box-shadow: 0 0 0 3px rgba(49, 92, 255, 0.12);
+}
+
+.contact__textarea {
+  resize: vertical;
+  min-height: 120px;
+  line-height: var(--leading-relaxed);
+}
+
+.contact__submit {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  align-self: flex-start;
+  margin-top: var(--space-2);
+  padding: var(--space-3) var(--space-6);
+  background: var(--accent-vivid);
+  color: #fff;
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: var(--tracking-normal);
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: background var(--duration-fast) var(--ease-out),
+              transform var(--duration-fast) var(--ease-out),
+              box-shadow var(--duration-fast) var(--ease-out);
+}
+
+.contact__submit:hover {
+  background: #1f47e0;
+  box-shadow: 0 4px 16px rgba(49, 92, 255, 0.28);
+  transform: translateY(-1px);
+}
+
+.contact__submit:active {
+  transform: translateY(0);
+  box-shadow: none;
 }
 
 @media (max-width: 768px) {
@@ -948,6 +1032,13 @@
     font-size: var(--text-3xl);
   }
   .contact__title br { display: none; }
+  .contact__actions {
+    margin-top: var(--space-6);
+  }
+  .contact__submit {
+    align-self: stretch;
+    justify-content: center;
+  }
 }
 
 

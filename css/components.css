@@ -154,35 +154,31 @@
   transform: translateY(-7px) rotate(-45deg);
 }
 
-.nav__overlay {
-  display: none;
-}
-
 @media (max-width: 768px) {
   .nav__toggle { display: flex; }
 
-  .nav__overlay {
-    display: flex;
+  /* Strip backdrop-filter when menu is open so fixed children
+     position relative to the viewport, not the nav element */
+  .nav--menu-open {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
+  .nav__links {
     position: fixed;
     inset: 0;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: var(--space-8);
     background: #100608;
     z-index: var(--z-overlay);
     transform: translateX(100%);
     transition: transform var(--duration-slow) var(--ease-out);
   }
 
-  .nav__overlay--open {
+  .nav__links--open {
     transform: translateX(0);
-  }
-
-  .nav__links {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--space-8);
   }
 
   .nav__link {

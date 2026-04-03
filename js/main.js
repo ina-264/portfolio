@@ -127,23 +127,23 @@
   window.addEventListener('scroll', handleNavScroll, { passive: true });
 
   // --- Mobile nav toggle ---
+  const navEl = document.getElementById('nav');
   const navToggle = document.getElementById('navToggle');
-  const navOverlay = document.getElementById('navOverlay');
   const navLinks = document.getElementById('navLinks');
 
   navToggle.addEventListener('click', () => {
     const isOpen = navToggle.getAttribute('aria-expanded') === 'true';
     navToggle.setAttribute('aria-expanded', !isOpen);
-    navOverlay.classList.toggle('nav__overlay--open');
-    navOverlay.setAttribute('aria-hidden', isOpen);
+    navEl.classList.toggle('nav--menu-open');
+    navLinks.classList.toggle('nav__links--open');
     document.body.style.overflow = isOpen ? '' : 'hidden';
   });
 
   navLinks.querySelectorAll('.nav__link').forEach((link) => {
     link.addEventListener('click', () => {
       navToggle.setAttribute('aria-expanded', 'false');
-      navOverlay.classList.remove('nav__overlay--open');
-      navOverlay.setAttribute('aria-hidden', 'true');
+      navEl.classList.remove('nav--menu-open');
+      navLinks.classList.remove('nav__links--open');
       document.body.style.overflow = '';
     });
   });
