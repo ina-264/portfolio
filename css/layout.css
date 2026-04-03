@@ -911,10 +911,11 @@
 }
 
 .contact__layout {
-  display: grid;
-  grid-template-columns: 1fr 1.1fr;
-  gap: var(--space-16);
-  align-items: start;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-6);
+  padding: var(--space-8) 0;
 }
 
 .contact__title {
@@ -934,10 +935,11 @@
 
 .contact__actions {
   display: flex;
-  flex-direction: column;
-  gap: var(--space-4);
-  align-items: flex-start;
-  margin-top: var(--space-8);
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--space-6);
+  align-items: center;
+  margin-top: var(--space-2);
 }
 
 /* Contact form */
@@ -1024,16 +1026,14 @@
 }
 
 @media (max-width: 768px) {
-  .contact__layout {
-    grid-template-columns: 1fr;
-    gap: var(--space-8);
-  }
   .contact__title {
     font-size: var(--text-3xl);
   }
   .contact__title br { display: none; }
   .contact__actions {
-    margin-top: var(--space-6);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-4);
   }
   .contact__submit {
     align-self: stretch;

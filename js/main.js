@@ -256,6 +256,44 @@
     window.addEventListener('scroll', updateSunParallax, { passive: true });
   }
 
+  // --- Contact Form Drawer ---
+  const formDrawer = document.getElementById('formDrawer');
+  const formDrawerClose = document.getElementById('formDrawerClose');
+  const formDrawerBackdrop = document.getElementById('formDrawerBackdrop');
+  const navGetInTouch = document.getElementById('navGetInTouch');
+  const contactOpenDrawer = document.getElementById('contactOpenDrawer');
+
+  function openDrawer() {
+    formDrawer.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    requestAnimationFrame(() => {
+      const firstInput = formDrawer.querySelector('input, textarea');
+      if (firstInput) firstInput.focus();
+    });
+  }
+
+  function closeDrawer() {
+    formDrawer.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  if (navGetInTouch) navGetInTouch.addEventListener('click', () => {
+    // Close mobile nav if open
+    navToggle.setAttribute('aria-expanded', 'false');
+    navEl.classList.remove('nav--menu-open');
+    navLinks.classList.remove('nav__links--open');
+    document.body.style.overflow = '';
+    openDrawer();
+  });
+
+  if (contactOpenDrawer) contactOpenDrawer.addEventListener('click', openDrawer);
+  if (formDrawerClose) formDrawerClose.addEventListener('click', closeDrawer);
+  if (formDrawerBackdrop) formDrawerBackdrop.addEventListener('click', closeDrawer);
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && formDrawer.getAttribute('aria-hidden') === 'false') closeDrawer();
+  });
+
   // --- Active nav link on scroll ---
   const sections = document.querySelectorAll('section[id]');
   const navLinksAll = document.querySelectorAll('.nav__link[href^="#"]');

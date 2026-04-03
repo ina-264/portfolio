@@ -99,6 +99,10 @@
   border: none;
   background: none;
   padding: 0;
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  cursor: pointer;
+  letter-spacing: var(--tracking-normal);
 }
 
 .nav__link--cta::after { display: none; }
@@ -1213,4 +1217,156 @@
 .flow-step__icon { font-size: var(--text-3xl); margin-bottom: var(--space-2); }
 .flow-step__label { font-size: var(--text-sm); font-weight: 700; color: var(--text-primary); margin-bottom: var(--space-1); }
 .flow-step__desc { font-size: var(--text-xs); color: var(--text-tertiary); line-height: var(--leading-relaxed); }
+
+
+/* --- Primary Button --- */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-6);
+  background: var(--accent-vivid);
+  color: #fff;
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: var(--tracking-normal);
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: background var(--duration-fast) var(--ease-out),
+              transform var(--duration-fast) var(--ease-out),
+              box-shadow var(--duration-fast) var(--ease-out);
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  background: #1f47e0;
+  box-shadow: 0 4px 16px rgba(49, 92, 255, 0.28);
+  transform: translateY(-1px);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+
+/* --- Contact Form Drawer --- */
+.form-drawer {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-modal);
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.form-drawer[aria-hidden="false"] {
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.form-drawer__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(12, 4, 8, 0.7);
+  opacity: 0;
+  transition: opacity 320ms var(--ease-out);
+  cursor: pointer;
+}
+
+.form-drawer[aria-hidden="false"] .form-drawer__backdrop {
+  opacity: 1;
+}
+
+.form-drawer__panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: min(480px, 100vw);
+  background: var(--bg-canvas);
+  border-left: 1px solid var(--line-subtle);
+  padding: var(--space-10) var(--space-10) var(--space-12);
+  overflow-y: auto;
+  transform: translateX(100%);
+  transition: transform 360ms cubic-bezier(0.32, 0, 0.67, 0);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.form-drawer[aria-hidden="false"] .form-drawer__panel {
+  transform: translateX(0);
+  transition-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.form-drawer__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-2);
+}
+
+.form-drawer__eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wider);
+  color: var(--accent-deep);
+  font-weight: 500;
+}
+
+.form-drawer__close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  border: 1px solid var(--line-subtle);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: border-color var(--duration-fast) var(--ease-out),
+              color var(--duration-fast) var(--ease-out);
+}
+
+.form-drawer__close:hover {
+  border-color: var(--line-strong);
+  color: var(--text-primary);
+}
+
+.form-drawer__title {
+  font-size: var(--text-2xl);
+  font-weight: 800;
+  letter-spacing: var(--tracking-tight);
+  line-height: var(--leading-snug);
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.form-drawer__desc {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: var(--leading-relaxed);
+  margin: 0 0 var(--space-2);
+}
+
+@media (max-width: 768px) {
+  .form-drawer__panel {
+    padding: var(--space-8) var(--space-6) var(--space-10);
+    width: 100vw;
+    border-left: none;
+    border-top: 1px solid var(--line-subtle);
+    top: auto;
+    bottom: 0;
+    height: 92dvh;
+    transform: translateY(100%);
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  }
+  .form-drawer[aria-hidden="false"] .form-drawer__panel {
+    transform: translateY(0);
+  }
+}
 .flow-step__connector { flex-shrink: 0; width: 40px; height: 1.5px; background: var(--accent-muted); margin-top: 28px; }
