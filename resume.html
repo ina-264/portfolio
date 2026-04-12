@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ina Lile — CV</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    /* ── Design tokens ── */
+    :root {
+      --canvas:         #180810;
+      --surface-1:      #2A1018;
+      --surface-2:      #3A1820;
+      --text-primary:   #F2EBE0;
+      --text-secondary: #C4A898;
+      --text-tertiary:  #7A6460;
+      --line-subtle:    #3A2028;
+      --line-strong:    #5A3040;
+      --accent-vivid:   #315CFF;
+      --accent-deep:    #DCE4FF;
+      --accent-muted:   #6E7FB8;
+      --gold:           #C9A84C;
+      --blush:          #A14C68;
+      --cream:          #F2EBE0;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html {
+      font-size: 16px;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      font-size: 0.875rem;
+      line-height: 1.6;
+      color: var(--text-primary);
+      background: var(--canvas);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    /* ════════════════════════════════════
+       PAGE SHELL
+    ════════════════════════════════════ */
+    .page {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    /* ════════════════════════════════════
+       HEADER — full width
+    ════════════════════════════════════ */
+    .header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 2rem;
+      padding: 2rem 2.5rem 1.5rem;
+      border-bottom: 1px solid var(--line-subtle);
+    }
+
+    .header__left {}
+
+    .header__eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.625rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent-vivid);
+      margin-bottom: 0.45rem;
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+    }
+    .header__eyebrow::before {
+      content: '';
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: var(--accent-vivid);
+      flex-shrink: 0;
+    }
+
+    .header__name {
+      font-size: 2.375rem;
+      font-weight: 800;
+      letter-spacing: -0.045em;
+      line-height: 1;
+      color: var(--cream);
+    }
+
+    /* Key stats — scannable proof points directly in header */
+    .header__stats {
+      display: flex;
+      gap: 1.75rem;
+      align-items: flex-end;
+      padding-bottom: 0.2rem;
+    }
+
+    .stat {
+      text-align: right;
+    }
+
+    .stat__value {
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      color: var(--cream);
+      line-height: 1;
+    }
+
+    .stat__value em {
+      font-style: normal;
+      color: var(--accent-vivid);
+    }
+
+    .stat__label {
+      font-family: var(--font-mono);
+      font-size: 0.5625rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-tertiary);
+      margin-top: 0.2rem;
+    }
+
+    /* ════════════════════════════════════
+       BODY — sidebar + main
+    ════════════════════════════════════ */
+    .body {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+    }
+
+    /* ────────────────────────────────────
+       SIDEBAR
+    ──────────────────────────────────── */
+    .sidebar {
+      background: var(--surface-1);
+      border-right: 1px solid var(--line-subtle);
+      padding: 1.5rem 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .sidebar-section {}
+
+    .sidebar-label {
+      font-family: var(--font-mono);
+      font-size: 0.5625rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-tertiary);
+      margin-bottom: 0.85rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .sidebar-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--line-subtle);
+    }
+
+    /* Contact */
+    .contact-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+    }
+    .contact-list li {
+      font-size: 0.6875rem;
+      color: var(--text-secondary);
+      font-family: var(--font-mono);
+      line-height: 1.4;
+      word-break: break-all;
+    }
+    .contact-list a { color: var(--text-secondary); }
+
+    /* Skill groups */
+    .skill-group {
+      margin-bottom: 0.85rem;
+    }
+    .skill-group:last-child { margin-bottom: 0; }
+
+    .skill-group__name {
+      font-family: var(--font-mono);
+      font-size: 0.5625rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-tertiary);
+      margin-bottom: 0.4rem;
+    }
+
+    .skill-group__items {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.3rem;
+    }
+
+    .skill-tag {
+      font-size: 0.625rem;
+      font-family: var(--font-mono);
+      color: var(--text-secondary);
+      background: var(--surface-2);
+      border: 1px solid var(--line-subtle);
+      border-radius: 3px;
+      padding: 0.2rem 0.45rem;
+      line-height: 1.4;
+    }
+
+    /* Languages */
+    .lang-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+    }
+    .lang-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 0.75rem;
+    }
+    .lang-item__name { color: var(--text-primary); font-weight: 500; }
+    .lang-item__level {
+      font-family: var(--font-mono);
+      font-size: 0.5625rem;
+      color: var(--text-tertiary);
+      letter-spacing: 0.06em;
+    }
+
+    /* Education in sidebar */
+    .edu-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .edu-item__title {
+      font-size: 0.6875rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      line-height: 1.35;
+    }
+    .edu-item__meta {
+      font-family: var(--font-mono);
+      font-size: 0.5625rem;
+      color: var(--text-tertiary);
+      margin-top: 0.15rem;
+      letter-spacing: 0.03em;
+    }
+
+    /* ────────────────────────────────────
+       MAIN CONTENT
+    ──────────────────────────────────── */
+    .main {
+      padding: 1.5rem 2rem 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    /* Section rule */
+    .section-rule {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.85rem;
+    }
+    .section-rule__label {
+      font-family: var(--font-mono);
+      font-size: 0.5625rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-tertiary);
+      white-space: nowrap;
+    }
+    .section-rule__line {
+      flex: 1;
+      height: 1px;
+      background: var(--line-subtle);
+    }
+
+    /* Summary */
+    .summary {
+      font-size: 0.8125rem;
+      color: var(--text-secondary);
+      line-height: 1.65;
+      max-width: 58ch;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--line-subtle);
+    }
+    .summary strong { color: var(--text-primary); font-weight: 600; }
+
+    /* Experience section */
+    .experience {}
+
+    /* Entry */
+    .entry {
+      padding: 0.85rem 0;
+      border-bottom: 1px solid var(--line-subtle);
+    }
+    .entry:last-child { border-bottom: none; padding-bottom: 0; }
+
+    /* Entry header row */
+    .entry__head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 0.15rem;
+    }
+
+    .entry__role {
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: var(--cream);
+      letter-spacing: -0.02em;
+    }
+
+    .entry__date {
+      font-family: var(--font-mono);
+      font-size: 0.5625rem;
+      color: var(--text-tertiary);
+      white-space: nowrap;
+      letter-spacing: 0.04em;
+    }
+
+    .entry__company {
+      font-size: 0.75rem;
+      color: var(--accent-muted);
+      margin-bottom: 0.6rem;
+      font-weight: 500;
+    }
+
+    /* Bullets — outcome-first */
+    .entry__bullets {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .entry__bullets li {
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+      line-height: 1.55;
+      padding-left: 1rem;
+      position: relative;
+    }
+    .entry__bullets li::before {
+      content: '–';
+      position: absolute;
+      left: 0;
+      color: var(--line-strong);
+    }
+
+    /* Highlight impact metrics in bullets */
+    .entry__bullets li strong {
+      color: var(--accent-deep);
+      font-weight: 600;
+    }
+
+    @media print {
+      body { background: var(--canvas); }
+      .page { max-width: 100%; }
+      @page { margin: 0; size: A4; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ══════════════════════════════
+       HEADER
+  ══════════════════════════════ -->
+  <header class="header">
+    <div class="header__left">
+      <div class="header__eyebrow">Product Designer</div>
+      <h1 class="header__name">Ina Lile</h1>
+    </div>
+
+    <!-- Three proof points visible at a glance -->
+    <div class="header__stats">
+      <div class="stat">
+        <div class="stat__value"><em>5+</em> yrs</div>
+        <div class="stat__label">Experience</div>
+      </div>
+      <div class="stat">
+        <div class="stat__value"><em>+25%</em></div>
+        <div class="stat__label">Engagement lift</div>
+      </div>
+      <div class="stat">
+        <div class="stat__value"><em>90%</em></div>
+        <div class="stat__label">Usability score</div>
+      </div>
+    </div>
+  </header>
+
+  <div class="body">
+
+    <!-- ══════════════════════════════
+         SIDEBAR — reference info
+         Recruiter's first scan:
+         "Can she do the job? What tools?"
+    ══════════════════════════════ -->
+    <aside class="sidebar">
+
+      <div class="sidebar-section">
+        <div class="sidebar-label">Contact</div>
+        <ul class="contact-list">
+          <li><a href="mailto:blerina.lile@gmail.com">blerina.lile@gmail.com</a></li>
+          <li>+49 152 363 47265</li>
+          <li><a href="https://www.linkedin.com/in/inalile/">linkedin.com/in/inalile</a></li>
+          <li><a href="https://www.inalile.com">inalile.com</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-label">Skills</div>
+
+        <div class="skill-group">
+          <div class="skill-group__name">Design</div>
+          <div class="skill-group__items">
+            <span class="skill-tag">User Research</span>
+            <span class="skill-tag">Usability Testing</span>
+            <span class="skill-tag">Information Architecture</span>
+            <span class="skill-tag">Interaction Design</span>
+            <span class="skill-tag">Design Systems</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group__name">Process</div>
+          <div class="skill-group__items">
+            <span class="skill-tag">Lean UX</span>
+            <span class="skill-tag">Agile / Scrum</span>
+            <span class="skill-tag">Stakeholder Mgmt</span>
+            <span class="skill-tag">Workshop Facilitation</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group__name">Tools</div>
+          <div class="skill-group__items">
+            <span class="skill-tag">Figma</span>
+            <span class="skill-tag">Miro</span>
+            <span class="skill-tag">Jira</span>
+            <span class="skill-tag">Confluence</span>
+            <span class="skill-tag">GitHub</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-label">Languages</div>
+        <ul class="lang-list">
+          <li class="lang-item">
+            <span class="lang-item__name">English</span>
+            <span class="lang-item__level">Advanced</span>
+          </li>
+          <li class="lang-item">
+            <span class="lang-item__name">German</span>
+            <span class="lang-item__level">Advanced</span>
+          </li>
+          <li class="lang-item">
+            <span class="lang-item__name">Spanish</span>
+            <span class="lang-item__level">Advanced</span>
+          </li>
+          <li class="lang-item">
+            <span class="lang-item__name">Albanian</span>
+            <span class="lang-item__level">Native</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-label">Education</div>
+        <ul class="edu-list">
+          <li>
+            <div class="edu-item__title">Scrum Master PSM1</div>
+            <div class="edu-item__meta">Scrum.org · 2023</div>
+          </li>
+          <li>
+            <div class="edu-item__title">UX Research</div>
+            <div class="edu-item__meta">Memorisely · 2022</div>
+          </li>
+          <li>
+            <div class="edu-item__title">UX / UI Design</div>
+            <div class="edu-item__meta">Ironhack · 2021</div>
+          </li>
+          <li>
+            <div class="edu-item__title">B.A. European Cultures &amp; Society</div>
+            <div class="edu-item__meta">Europa-Universität Flensburg · 2020</div>
+          </li>
+        </ul>
+      </div>
+
+    </aside>
+
+    <!-- ══════════════════════════════
+         MAIN — narrative content
+         Chronological story after
+         the recruiter is convinced
+    ══════════════════════════════ -->
+    <main class="main">
+
+      <p class="summary">
+        Product Designer with <strong>5+ years</strong> designing user-centered digital products across native apps and web platforms. Specialist in <strong>UX research, design systems,</strong> and cross-functional collaboration in Agile environments.
+      </p>
+
+      <section class="experience">
+        <div class="section-rule">
+          <span class="section-rule__label">01 / Experience</span>
+          <span class="section-rule__line"></span>
+        </div>
+
+        <div class="entry">
+          <div class="entry__head">
+            <span class="entry__role">Product Designer</span>
+            <span class="entry__date">Apr 2025 — Present</span>
+          </div>
+          <div class="entry__company">Lovehoney Group · Berlin</div>
+          <ul class="entry__bullets">
+            <li>Leading UX/UI for the <strong>We-Vibe native app</strong> — continuous research cycles driving engagement and retention.</li>
+            <li>Running usability testing cadence to validate design decisions and reduce costly late-stage iteration.</li>
+            <li>Aligning product, marketing, and brand on a unified experience across all digital touchpoints.</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="entry__head">
+            <span class="entry__role">Product Designer</span>
+            <span class="entry__date">Nov 2021 — Apr 2024</span>
+          </div>
+          <div class="entry__company">Lightspeed Commerce · Berlin</div>
+          <ul class="entry__bullets">
+            <li><strong>+25% user engagement, −30% cart abandonment</strong> — led end-to-end UX for Order Anywhere: Order Status, Self-Delivery, and UberEats Onboarding.</li>
+            <li><strong>−20% development errors</strong> — built reusable components as part of the Hospitality Design System.</li>
+            <li><strong>90% usability score</strong> — applied Lean UX practices with iterative user research across the full feature lifecycle.</li>
+            <li>Ran cross-functional workshops and Show &amp; Tells to accelerate alignment across product, design, and engineering.</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="entry__head">
+            <span class="entry__role">E-Commerce Specialist</span>
+            <span class="entry__date">Feb 2019 — Sep 2020</span>
+          </div>
+          <div class="entry__company">Monoprice GmbH · Berlin</div>
+          <ul class="entry__bullets">
+            <li><strong>+20% team efficiency</strong> — implemented process improvements across the e-commerce division.</li>
+            <li><strong>−15% fulfilment costs</strong> — streamlined order processing and inventory management through data analysis.</li>
+            <li>Adapted product strategy to evolving consumer trends, improving B2C customer satisfaction.</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="entry__head">
+            <span class="entry__role">Product Operations Specialist</span>
+            <span class="entry__date">May 2018 — Jan 2019</span>
+          </div>
+          <div class="entry__company">Highsnobiety · Berlin</div>
+          <ul class="entry__bullets">
+            <li><strong>−10% order cancellations</strong> — applied 5 Whys root cause analysis to resolve recurring operational issues.</li>
+            <li><strong>−10% product launch timelines</strong> on Shopify through improved cross-functional communication.</li>
+            <li>Managed end-to-end B2C customer journey across acquisition, retention, and loyalty.</li>
+          </ul>
+        </div>
+
+      </section>
+    </main>
+
+  </div><!-- /body -->
+</div><!-- /page -->
+</body>
+</html>
