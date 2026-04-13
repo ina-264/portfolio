@@ -771,6 +771,43 @@
 }
 
 
+/* --- CV Modal --- */
+.modal__container--cv {
+  padding: 0;
+  overflow: hidden;
+  background: #F2EBE0;
+}
+
+.modal__container--cv .modal__close {
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+  background: rgba(24, 8, 16, 0.08);
+  border-color: rgba(24, 8, 16, 0.12);
+  color: #180810;
+  z-index: 10;
+}
+
+.modal__container--cv .modal__close:hover {
+  background: rgba(24, 8, 16, 0.15);
+  color: #180810;
+  transform: rotate(90deg);
+}
+
+.modal__cv-frame {
+  display: block;
+  width: 100%;
+  height: 90vh;
+  border: none;
+  border-radius: var(--radius-xl);
+}
+
+@media (max-width: 768px) {
+  .modal__cv-frame {
+    height: calc(100vh - var(--space-16));
+  }
+}
+
 /* --- Case Study (inside modal) --- */
 
 .case-study__header {

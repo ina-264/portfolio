@@ -1021,13 +1021,14 @@
             </ul>
           </div>
           <div class="about__info-group about__cv-actions">
-            <a href="resume.html" target="_blank" rel="noopener" class="cta-read">
+            <button class="cta-read" data-case="cv" type="button">
               <span>View CV</span>
               <span class="cta-read__rule" aria-hidden="true"></span>
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                <path d="M3 8a5 5 0 1 0 10 0A5 5 0 0 0 3 8Zm5-2v4M6 9l2 2 2-2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M1 8C1 8 3.5 3 8 3s7 5 7 5-2.5 5-7 5-7-5-7-5z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                <circle cx="8" cy="8" r="2" stroke="currentColor" stroke-width="1.5"/>
               </svg>
-            </a>
+            </button>
             <a href="assets/resume.pdf" download="Ina-Lile-Resume.pdf" class="cta-read">
               <span>Download CV</span>
               <span class="cta-read__rule" aria-hidden="true"></span>
@@ -1070,6 +1071,19 @@
       </div>
     </div>
   </section>
+
+  <!-- ============================================ -->
+  <!-- CV MODAL                                     -->
+  <!-- ============================================ -->
+  <div class="modal modal--cv" id="modal-cv" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Ina Lile — CV">
+    <div class="modal__backdrop"></div>
+    <div class="modal__container modal__container--cv">
+      <button class="modal__close" aria-label="Close">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <iframe src="resume.html" title="Ina Lile — CV" class="modal__cv-frame" loading="lazy"></iframe>
+    </div>
+  </div>
 
   <!-- ============================================ -->
   <!-- CONTACT FORM DRAWER                          -->
