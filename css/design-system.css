@@ -4,18 +4,18 @@
 
 :root {
   /* --- Editorial Palette: Burgundy / Wine --- */
-  --canvas:         #2A1220;
-  --surface-1:      #3C1C2C;
-  --surface-2:      #4C2238;
-  --surface-inset:  #1E0C14;
+  --canvas:         #180810;
+  --surface-1:      #2A1018;
+  --surface-2:      #3A1820;
+  --surface-inset:  #0F0508;
 
   --text-primary:   #F2EBE0;
   --text-secondary: #C4A898;
   --text-tertiary:  #7A6460;
-  --text-inverse:   #2A1220;
+  --text-inverse:   #180810;
 
-  --line-subtle:    #4E2C3C;
-  --line-strong:    #6E3C52;
+  --line-subtle:    #3A2028;
+  --line-strong:    #5A3040;
 
   /* --- Accent Family: Cobalt / Royal Blue --- */
   --accent-vivid:   #315CFF;
@@ -46,13 +46,13 @@
   --counter-accent: #8E3F5D;
 
   /* --- Cool Counterbalance --- */
-  --ink:            #1E0C14;
-  --ink-muted:      #3C1C30;
+  --ink:            #0F0508;
+  --ink-muted:      #2A1020;
 
   /* --- Semantic Surfaces --- */
   --bg-canvas:      var(--canvas);
   --bg-surface:     var(--surface-1);
-  --bg-elevated:    #341A2C;
+  --bg-elevated:    #201018;
   --bg-inset:       var(--surface-inset);
   --color-success:  #5AAB7A;
 
@@ -194,18 +194,18 @@
 /* --- Deeper wine in true dark mode --- */
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg-canvas:      #220E18;
-    --bg-surface:     #2E1624;
-    --bg-elevated:    #2A1220;
-    --bg-inset:       #160810;
+    --bg-canvas:      #100608;
+    --bg-surface:     #1C0C14;
+    --bg-elevated:    #180A10;
+    --bg-inset:       #080206;
 
-    --line-subtle:    #422430;
-    --line-strong:    #5C2A3C;
+    --line-subtle:    #2E1820;
+    --line-strong:    #481E2A;
 
-    --canvas:         #220E18;
-    --surface-1:      #2E1624;
-    --surface-2:      #422430;
-    --surface-inset:  #160810;
+    --canvas:         #100608;
+    --surface-1:      #1C0C14;
+    --surface-2:      #2E1820;
+    --surface-inset:  #080206;
 
     --shadow-xs:  0 1px 2px rgba(5, 0, 3, 0.65);
     --shadow-sm:  0 2px 4px rgba(5, 0, 3, 0.70);
