@@ -210,28 +210,28 @@
 
 /* Annotation tab */
 .floater--tab {
-  background: rgba(49, 92, 255, 0.10);
-  border: 1px solid rgba(49, 92, 255, 0.30);
+  background: rgba(49, 92, 255, 0.18);
+  border: 1px solid rgba(49, 92, 255, 0.50);
   border-radius: var(--radius-sm);
   padding: var(--space-1) var(--space-3);
   font-family: var(--font-mono);
   font-size: 10px;
   letter-spacing: var(--tracking-wider);
   text-transform: uppercase;
-  color: var(--text-secondary);
+  color: var(--accent-deep);
   animation: floatDrift 11s ease-in-out infinite,
              floatFade 7s ease-in-out infinite 1.5s;
 }
 
 /* Caption block */
 .floater--caption {
-  background: rgba(36, 63, 174, 0.10);
-  border-left: 2px solid var(--accent-muted);
+  background: rgba(36, 63, 174, 0.18);
+  border-left: 2px solid var(--accent-vivid);
   padding: var(--space-2) var(--space-3);
   font-family: var(--font-mono);
   font-size: 9px;
   letter-spacing: var(--tracking-wide);
-  color: rgba(110, 127, 184, 0.95);
+  color: var(--accent-deep);
   animation: floatDriftAlt 15s ease-in-out infinite;
   max-width: 120px;
   line-height: 1.4;
@@ -242,7 +242,7 @@
   font-family: var(--font-mono);
   font-size: var(--text-5xl);
   font-weight: 800;
-  color: rgba(49, 92, 255, 0.14);
+  color: rgba(49, 92, 255, 0.28);
   line-height: 1;
   animation: floatDrift 18s ease-in-out infinite;
   user-select: none;
@@ -254,10 +254,10 @@
   height: 40px;
   background: linear-gradient(
     135deg,
-    rgba(49, 92, 255, 0.06) 0%,
-    rgba(49, 92, 255, 0.02) 100%
+    rgba(49, 92, 255, 0.16) 0%,
+    rgba(49, 92, 255, 0.06) 100%
   );
-  border: 1px solid rgba(49, 92, 255, 0.10);
+  border: 1px solid rgba(49, 92, 255, 0.30);
   border-radius: var(--radius-md);
   backdrop-filter: blur(4px);
   animation: floatDriftAlt 14s ease-in-out infinite;
@@ -268,8 +268,8 @@
   width: 32px;
   height: 32px;
   border-radius: var(--radius-sm);
-  background: rgba(13, 21, 53, 0.50);
-  border: 1px solid rgba(49, 92, 255, 0.12);
+  background: rgba(49, 92, 255, 0.16);
+  border: 1px solid rgba(49, 92, 255, 0.40);
   animation: chipFloat 13s ease-in-out infinite,
              floatFade 9s ease-in-out infinite 2s;
 }
@@ -318,15 +318,15 @@
   border-radius: 62% 38% 54% 46% / 46% 58% 42% 56%;
   background:
     radial-gradient(ellipse 52% 44% at 40% 44%,
-      rgba(161, 76, 104, 0.28)  0%,
-      rgba(142, 63, 93,  0.10)  50%,
+      rgba(161, 76, 104, 0.48)  0%,
+      rgba(142, 63, 93,  0.20)  50%,
       transparent               74%),
     radial-gradient(ellipse 44% 36% at 60% 56%,
-      rgba(142, 63, 93,  0.18)  0%,
-      rgba(118, 48, 74,  0.06)  52%,
+      rgba(142, 63, 93,  0.34)  0%,
+      rgba(118, 48, 74,  0.12)  52%,
       transparent               72%),
     radial-gradient(ellipse 36% 28% at 30% 34%,
-      rgba(161, 76, 104, 0.14)  0%,
+      rgba(161, 76, 104, 0.26)  0%,
       transparent               58%);
   filter: blur(96px) contrast(0.97);
   animation: stainDrift 64s ease-in-out infinite,
@@ -350,15 +350,15 @@
   border-radius: 55% 45% 62% 38% / 46% 60% 40% 54%;
   background:
     radial-gradient(ellipse 54% 48% at 28% 44%,
-      rgba(161, 76, 104, 0.30)  0%,
-      rgba(142, 63, 93,  0.10)  50%,
+      rgba(161, 76, 104, 0.52)  0%,
+      rgba(142, 63, 93,  0.22)  50%,
       transparent               74%),
     radial-gradient(ellipse 42% 34% at 52% 56%,
-      rgba(142, 63, 93,  0.18)  0%,
-      rgba(118, 48, 74,  0.06)  54%,
+      rgba(142, 63, 93,  0.34)  0%,
+      rgba(118, 48, 74,  0.12)  54%,
       transparent               72%),
     radial-gradient(ellipse 32% 24% at 20% 28%,
-      rgba(161, 76, 104, 0.12)  0%,
+      rgba(161, 76, 104, 0.24)  0%,
       transparent               56%);
   filter: blur(148px) contrast(0.94);
   animation: stainDrift 82s ease-in-out infinite,
@@ -377,11 +377,11 @@
   border-radius: 44% 56% 52% 48% / 58% 42% 56% 44%;
   background:
     radial-gradient(ellipse 56% 48% at 44% 50%,
-      rgba(161, 76, 104, 0.20)  0%,
-      rgba(142, 63, 93,  0.07)  52%,
+      rgba(161, 76, 104, 0.40)  0%,
+      rgba(142, 63, 93,  0.16)  52%,
       transparent               74%),
     radial-gradient(ellipse 34% 26% at 64% 38%,
-      rgba(142, 63, 93,  0.12)  0%,
+      rgba(142, 63, 93,  0.26)  0%,
       transparent               58%);
   filter: blur(88px) contrast(0.97);
   animation: stainDriftAlt 88s ease-in-out infinite,
@@ -399,11 +399,11 @@
   border-radius: 54% 46% 46% 54% / 48% 56% 44% 52%;
   background:
     radial-gradient(ellipse 60% 50% at 44% 48%,
-      rgba(161, 76, 104, 0.22)  0%,
-      rgba(142, 63, 93,  0.08)  48%,
+      rgba(161, 76, 104, 0.42)  0%,
+      rgba(142, 63, 93,  0.18)  48%,
       transparent               72%),
     radial-gradient(ellipse 36% 28% at 58% 38%,
-      rgba(142, 63, 93,  0.14)  0%,
+      rgba(142, 63, 93,  0.28)  0%,
       transparent               56%);
   filter: blur(90px) contrast(0.97);
   animation: stainDriftAlt 70s ease-in-out infinite,
@@ -663,25 +663,18 @@ body.loading .hero {
   .atm-bloom--primary {
     width: 380px;
     height: 300px;
-    filter: blur(80px) contrast(0.97);
+    filter: blur(60px) contrast(0.97);
   }
 
   .atm-bloom--secondary {
     width: 200px;
     height: 160px;
-    filter: blur(60px) contrast(0.97);
+    filter: blur(44px) contrast(0.97);
   }
 
   .atm-bloom--sm {
     width: 220px;
     height: 180px;
-    filter: blur(60px) contrast(0.97);
-  }
-
-  /* Tone down non-text floaters slightly on mobile */
-  .floater--chip,
-  .floater--strip,
-  .floater--card {
-    opacity: 0.5;
+    filter: blur(44px) contrast(0.97);
   }
 }
