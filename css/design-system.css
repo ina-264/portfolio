@@ -10,8 +10,8 @@
   --surface-inset:  #180B12;
 
   --text-primary:   #F2EBE0;
-  --text-secondary: #C4A898;
-  --text-tertiary:  #7A6460;
+  --text-secondary: #D4B8A8;
+  --text-tertiary:  #A08880;
   --text-inverse:   #180810;
 
   --line-subtle:    #4A2838;
@@ -172,7 +172,7 @@
   --color-neutral-400: var(--text-tertiary);
   --color-neutral-500: var(--text-secondary);
   --color-neutral-600: var(--text-secondary);
-  --color-neutral-700: #C4A898;
+  --color-neutral-700: #D4B8A8;
   --color-neutral-800: #E0D4C4;
   --color-neutral-900: var(--text-primary);
   --color-neutral-950: var(--cream);
