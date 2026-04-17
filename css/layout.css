@@ -9,7 +9,7 @@
   position: relative;
   overflow: hidden;
   /* isolation: isolate creates a compositing group with an opaque backdrop.
-     background-color provides that opaque backdrop (#180810).
+     background-color provides that opaque backdrop (#240E1A).
      Without both, mix-blend-mode: screen inside has nothing to blend against
      and the effect is invisible. */
   isolation: isolate;
@@ -29,28 +29,28 @@
   border-radius: 58% 42% 52% 48% / 44% 58% 42% 56%;
   background:
     radial-gradient(ellipse 22% 18% at 28% 40%,
-      rgba(161, 76, 104, 1.00)  0%,
-      rgba(142, 63, 93,  0.52)  45%,
+      rgba(190, 88, 120, 1.00)  0%,
+      rgba(168, 74, 108, 0.52)  45%,
       transparent               68%),
     radial-gradient(ellipse 26% 20% at 55% 34%,
-      rgba(155, 70, 98,  0.95)  0%,
-      rgba(135, 58, 86,  0.44)  48%,
+      rgba(182, 82, 114, 0.95)  0%,
+      rgba(160, 68, 102, 0.44)  48%,
       transparent               70%),
     radial-gradient(ellipse 18% 15% at 44% 60%,
-      rgba(148, 65, 95,  0.88)  0%,
-      rgba(128, 54, 82,  0.38)  45%,
+      rgba(176, 78, 110, 0.88)  0%,
+      rgba(154, 64, 98,  0.38)  45%,
       transparent               66%),
     radial-gradient(ellipse 15% 12% at 33% 68%,
-      rgba(142, 63, 93,  0.82)  0%,
-      rgba(122, 52, 78,  0.32)  42%,
+      rgba(168, 74, 108, 0.82)  0%,
+      rgba(146, 62, 94,  0.32)  42%,
       transparent               62%),
     radial-gradient(ellipse 12% 10% at 64% 50%,
-      rgba(161, 76, 104, 0.78)  0%,
-      rgba(138, 62, 92,  0.28)  44%,
+      rgba(190, 88, 120, 0.78)  0%,
+      rgba(164, 72, 104, 0.28)  44%,
       transparent               60%),
     radial-gradient(ellipse 10% 8%  at 18% 25%,
-      rgba(148, 65, 95,  0.72)  0%,
-      rgba(125, 54, 80,  0.22)  40%,
+      rgba(176, 78, 110, 0.72)  0%,
+      rgba(152, 64, 96,  0.22)  40%,
       transparent               58%);
   filter: blur(22px);
   pointer-events: none;
@@ -629,7 +629,7 @@
 
 .workflow__pillar:hover {
   border-color: var(--line-strong);
-  box-shadow: 0 4px 20px rgba(49, 92, 255, 0.06);
+  box-shadow: 0 4px 20px rgba(77, 112, 255, 0.08);
 }
 
 .workflow__pillar-label {
@@ -990,7 +990,7 @@
 
 .contact__input:focus {
   border-color: var(--accent-vivid);
-  box-shadow: 0 0 0 3px rgba(49, 92, 255, 0.12);
+  box-shadow: 0 0 0 3px rgba(77, 112, 255, 0.16);
 }
 
 .contact__textarea {
@@ -1021,8 +1021,8 @@
 }
 
 .contact__submit:hover {
-  background: #1f47e0;
-  box-shadow: 0 4px 16px rgba(49, 92, 255, 0.28);
+  background: var(--accent-strong);
+  box-shadow: var(--shadow-accent);
   transform: translateY(-1px);
 }
 
